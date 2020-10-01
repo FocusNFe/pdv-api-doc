@@ -6,9 +6,9 @@ Produção: http://api.focuslojas.com.br/customers.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
-POST | customers.json | Cria um novo cadastro de cliente.
-GET | customers.json | Consulta de todos os clientes cadastrados.
-GET | customers/ID.json | Consulta um cadastro especifico.
+POST | /customers.json | Cria um novo cadastro de cliente.
+GET | /customers.json | Consulta de todos os clientes cadastrados.
+GET | / customers/ID.json | Consulta um cadastro especifico.
 
 ## Campos
 
@@ -285,12 +285,22 @@ Ao lado você pode visualizar como é o JSON esperado para criação e como é o
 ```json
 {
     "customer":
-    {    
-        "name": "Nome do usuário",
+    {
+        "name": "Esplugão de homologacao",
         "legal_type":"NATURAL",
         "cpf":"88127738000",
-        "birthday":"1992-06-05"
-    }
+        "birthday":"1992-06-05",
+        "addresses_attributes":
+        [
+            {
+                "address_type": "default",
+                "logradouro": "Rua da cascatinha",
+                "numero": 138,
+                "bairro": "acacias",
+                "cep":"83550020"
+            }
+        ]
+    } 
 }
 ```
 
