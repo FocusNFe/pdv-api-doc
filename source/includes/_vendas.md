@@ -315,7 +315,7 @@ Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os me
 
 Ao lado você pode visualizar como é o JSON de resposta da nossa API.
 
-> JSON enviado pela API Focus Lojas na consulta de vendas.
+> JSON enviado pela API Focus Lojas como resposta da consulta.
 
 ```json
 ```

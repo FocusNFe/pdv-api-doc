@@ -17,10 +17,10 @@ includes:
   - fornecedores
   - informacaoes_contato
   - inventario
-  - kit_itens
   - kits
   - parametros_sistema
   - produtos
+  - departamentos
   - reducao_Z
   - tipos_produto
   - usuarios_pdv
