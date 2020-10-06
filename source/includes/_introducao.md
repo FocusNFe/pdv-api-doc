@@ -1,6 +1,6 @@
 # Introdução
 
-O software Focus Lojas disponibiliza uma API utilizando a arquitetura REST (Representational State Transfer) onde é utilizada uma URL em conjunto com os verbos disponíveis pelo protocolo HTTP: POST, GET, PUT e DELETE para simular as operações CRUD (*C*reate, *R*etrieve, *U*pdate e *D*elete) de um dado recurso. Um recurso geralmente representa um objeto no banco de dados.
+O Focus Lojas disponibiliza uma API utilizando a arquitetura REST (Representational State Transfer) onde é utilizada uma URL em conjunto com os verbos disponíveis pelo protocolo HTTP: POST, GET, PUT e DELETE para simular as operações CRUD (*C*reate, *R*etrieve, *U*pdate e *D*elete) de um dado recurso. Um recurso geralmente representa um objeto no banco de dados.
 
 Por exemplo, suponha um recurso chamado “Loja” que representa um estabelecimento identificado por um número sequencial (id). Podemos ter as seguintes operações:
 
@@ -14,7 +14,7 @@ Deleta uma loja cujo id é2 | DELETE /lojas/2
 
 ## URL
 
-Produção/Teste: http://api.focuslojas.com.br/
+Produção: http://api.focuslojas.com.br/
 
 ## Respostas
 
@@ -43,6 +43,19 @@ api_version | Versão da API. Atualmente, aceita apenas '1'.
 ```shell
 
 curl -H 'Authorization: Token token=TOKEN_AQUI, serial_number=NUMERO_DE_SERIE, api_version=1' https://app.focuslojas.com.br/customers.json
-	
+
 ```
 
+## Formato do JSON de entrada
+
+### Campos de objetos aninhados
+
+## Formato do JSON de resposta
+
+### Objetos relacionados
+
+## Facilidades de sincronização
+
+### Enviando dados: Sincronização com ID original
+
+### Recebendo dados: Entendendo o campo de versão

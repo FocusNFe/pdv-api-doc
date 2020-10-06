@@ -8,30 +8,27 @@ toc_footers:
 
 includes:
   - introducao
+  - departamentos
+  - tipos_produto
+  - variacoes
+  - fornecedores
+  - produtos
+  - kits
+  - clientes
+  - usuarios_pdv
+  - vendas
   - caixa
   - cheque
-  - clientes
   - configuracoes_loja
   - contador_inventario
   - entradas_pdv
-  - fornecedores
   - informacaoes_contato
   - inventario
-  - kits
   - parametros_sistema
-  - produtos
-  - departamentos
   - reducao_Z
-  - tipos_produto
-  - usuarios_pdv
   - vale_presente
-  - variacoes
-  - vendas
-  - vendas_nao_verificadas
   - errors
 
 search: true
 
 ---
-
-
