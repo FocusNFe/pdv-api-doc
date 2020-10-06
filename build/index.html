@@ -1,0 +1,3566 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>API Focus Lojas</title>
+
+    <style media="screen">
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .gh {
+  color: #999999;
+}
+.highlight .sr {
+  color: #f6aa11;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gs {
+}
+.highlight .gu {
+  color: #aaaaaa;
+}
+.highlight .nb {
+  color: #f6aa11;
+}
+.highlight .cm {
+  color: #75715e;
+}
+.highlight .cp {
+  color: #75715e;
+}
+.highlight .c1 {
+  color: #75715e;
+}
+.highlight .cs {
+  color: #75715e;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
+  color: #75715e;
+}
+.highlight .err {
+  color: #960050;
+}
+.highlight .gr {
+  color: #960050;
+}
+.highlight .gt {
+  color: #960050;
+}
+.highlight .gd {
+  color: #49483e;
+}
+.highlight .gi {
+  color: #49483e;
+}
+.highlight .ge {
+  color: #49483e;
+}
+.highlight .kc {
+  color: #66d9ef;
+}
+.highlight .kd {
+  color: #66d9ef;
+}
+.highlight .kr {
+  color: #66d9ef;
+}
+.highlight .no {
+  color: #66d9ef;
+}
+.highlight .kt {
+  color: #66d9ef;
+}
+.highlight .mf {
+  color: #ae81ff;
+}
+.highlight .mh {
+  color: #ae81ff;
+}
+.highlight .il {
+  color: #ae81ff;
+}
+.highlight .mi {
+  color: #ae81ff;
+}
+.highlight .mo {
+  color: #ae81ff;
+}
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff;
+}
+.highlight .sc {
+  color: #ae81ff;
+}
+.highlight .se {
+  color: #ae81ff;
+}
+.highlight .ss {
+  color: #ae81ff;
+}
+.highlight .sd {
+  color: #e6db74;
+}
+.highlight .s2 {
+  color: #e6db74;
+}
+.highlight .sb {
+  color: #e6db74;
+}
+.highlight .sh {
+  color: #e6db74;
+}
+.highlight .si {
+  color: #e6db74;
+}
+.highlight .sx {
+  color: #e6db74;
+}
+.highlight .s1 {
+  color: #e6db74;
+}
+.highlight .s, .highlight .sa, .highlight .dl {
+  color: #e6db74;
+}
+.highlight .na {
+  color: #a6e22e;
+}
+.highlight .nc {
+  color: #a6e22e;
+}
+.highlight .nd {
+  color: #a6e22e;
+}
+.highlight .ne {
+  color: #a6e22e;
+}
+.highlight .nf, .highlight .fm {
+  color: #a6e22e;
+}
+.highlight .vc {
+  color: #ffffff;
+}
+.highlight .nn {
+  color: #ffffff;
+}
+.highlight .ni {
+  color: #ffffff;
+}
+.highlight .bp {
+  color: #ffffff;
+}
+.highlight .vg {
+  color: #ffffff;
+}
+.highlight .vi {
+  color: #ffffff;
+}
+.highlight .nv, .highlight .vm {
+  color: #ffffff;
+}
+.highlight .w {
+  color: #ffffff;
+}
+.highlight {
+  color: #ffffff;
+}
+.highlight .n, .highlight .py, .highlight .nx {
+  color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
+}
+.highlight .ow {
+  color: #f92672;
+}
+.highlight .nt {
+  color: #f92672;
+}
+.highlight .k, .highlight .kv {
+  color: #f92672;
+}
+.highlight .kn {
+  color: #f92672;
+}
+.highlight .kp {
+  color: #f92672;
+}
+.highlight .o {
+  color: #f92672;
+}
+    </style>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-e9bde216.js"></script>
+
+  </head>
+
+  <body class="index" data-languages="[&quot;shell&quot;]">
+    <a href="#" id="nav-button">
+      <span>
+        NAV
+        <img src="images/navbar-cad8cdcb.png" alt="" />
+      </span>
+    </a>
+    <div class="toc-wrapper">
+      <img src="images/logo-397b185d.png" class="logo" alt="" />
+        <div class="lang-selector">
+              <a href="#" data-language-name="shell">shell</a>
+        </div>
+        <div class="search">
+          <input type="text" class="search" id="input-search" placeholder="Search">
+        </div>
+        <ul class="search-results"></ul>
+      <ul id="toc" class="toc-list-h1">
+          <li>
+            <a href="#introducao" class="toc-h1 toc-link" data-title="Introdução">Introdução</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url" class="toc-h2 toc-link" data-title="URL">URL</a>
+                  </li>
+                  <li>
+                    <a href="#respostas" class="toc-h2 toc-link" data-title="Respostas">Respostas</a>
+                  </li>
+                  <li>
+                    <a href="#autenticacao" class="toc-h2 toc-link" data-title="Autenticação">Autenticação</a>
+                  </li>
+                  <li>
+                    <a href="#formato-do-json-de-entrada" class="toc-h2 toc-link" data-title="Formato do JSON de entrada">Formato do JSON de entrada</a>
+                  </li>
+                  <li>
+                    <a href="#formato-do-json-de-resposta" class="toc-h2 toc-link" data-title="Formato do JSON de resposta">Formato do JSON de resposta</a>
+                  </li>
+                  <li>
+                    <a href="#facilidades-de-sincronizacao" class="toc-h2 toc-link" data-title="Facilidades de sincronização">Facilidades de sincronização</a>
+                  </li>
+                  <li>
+                    <a href="#formato-desta-documentacao" class="toc-h2 toc-link" data-title="Formato desta documentação">Formato desta documentação</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#departamentos" class="toc-h1 toc-link" data-title="Departamentos">Departamentos</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#tipos-de-produto" class="toc-h1 toc-link" data-title="Tipos de produto">Tipos de produto</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#variacoes" class="toc-h1 toc-link" data-title="Variações">Variações</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+                  <li>
+                    <a href="#consulta" class="toc-h2 toc-link" data-title="Consulta">Consulta</a>
+                  </li>
+                  <li>
+                    <a href="#erros" class="toc-h2 toc-link" data-title="Erros">Erros</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#fornecedores" class="toc-h1 toc-link" data-title="Fornecedores">Fornecedores</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#produtos" class="toc-h1 toc-link" data-title="Produtos">Produtos</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#agrupador" class="toc-h2 toc-link" data-title="Agrupador">Agrupador</a>
+                  </li>
+                  <li>
+                    <a href="#item-de-grade" class="toc-h2 toc-link" data-title="Item de grade">Item de grade</a>
+                  </li>
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#kits" class="toc-h1 toc-link" data-title="Kits">Kits</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+                  <li>
+                    <a href="#observacoes" class="toc-h2 toc-link" data-title="Observações">Observações</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#clientes" class="toc-h1 toc-link" data-title="Clientes">Clientes</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+                  <li>
+                    <a href="#criacao" class="toc-h2 toc-link" data-title="Criação">Criação</a>
+                  </li>
+                  <li>
+                    <a href="#consulta" class="toc-h2 toc-link" data-title="Consulta">Consulta</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#usuarios-do-pdv" class="toc-h1 toc-link" data-title="Usuários do PDV">Usuários do PDV</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#vendas" class="toc-h1 toc-link" data-title="Vendas">Vendas</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+                  <li>
+                    <a href="#campos-da-lista-customer" class="toc-h2 toc-link" data-title="Campos da lista customer">Campos da lista customer</a>
+                  </li>
+                  <li>
+                    <a href="#campos-da-lista-pos" class="toc-h2 toc-link" data-title="Campos da lista pos">Campos da lista pos</a>
+                  </li>
+                  <li>
+                    <a href="#campos-da-lista-pos_entries" class="toc-h2 toc-link" data-title="Campos da lista pos_entries">Campos da lista pos_entries</a>
+                  </li>
+                  <li>
+                    <a href="#campos-da-lista-sold_items" class="toc-h2 toc-link" data-title="Campos da lista sold_items">Campos da lista sold_items</a>
+                  </li>
+                  <li>
+                    <a href="#campos-da-lista-returned_items" class="toc-h2 toc-link" data-title="Campos da lista returned_items">Campos da lista returned_items</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#informacoes-de-contato" class="toc-h1 toc-link" data-title="Informações de contato">Informações de contato</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+                  <li>
+                    <a href="#criacao" class="toc-h2 toc-link" data-title="Criação">Criação</a>
+                  </li>
+                  <li>
+                    <a href="#consulta" class="toc-h2 toc-link" data-title="Consulta">Consulta</a>
+                  </li>
+                  <li>
+                    <a href="#erros" class="toc-h2 toc-link" data-title="Erros">Erros</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#reducao-z" class="toc-h1 toc-link" data-title="Redução Z">Redução Z</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#vale-presente" class="toc-h1 toc-link" data-title="Vale Presente">Vale Presente</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#estoque" class="toc-h1 toc-link" data-title="Estoque">Estoque</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
+      </ul>
+    </div>
+    <div class="page-wrapper">
+      <div class="dark-box"></div>
+      <div class="content">
+        <h1 id='introducao'>Introdução</h1>
+<p>O Focus Lojas disponibiliza uma API utilizando a arquitetura REST (Representational State Transfer) onde é utilizada uma URL em conjunto com os verbos disponíveis pelo protocolo HTTP: POST, GET, PUT e DELETE para simular as operações CRUD (*C*reate, *R*etrieve, *U*pdate e *D*elete) de um dado recurso. Um recurso geralmente representa um objeto no banco de dados.</p>
+
+<p>Por exemplo, suponha um recurso chamado “Loja” que representa um estabelecimento identificado por um número sequencial (id). Podemos ter as seguintes operações:</p>
+
+<table><thead>
+<tr>
+<th>Operação</th>
+<th>Chamada HTTP</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Recupera lista de lojas cadastradas</td>
+<td>GET /lojas</td>
+</tr>
+<tr>
+<td>Cria uma nova loja</td>
+<td>POST /lojas (nos dados do POST serão enviados os campos da loja)</td>
+</tr>
+<tr>
+<td>Recupera dados de uma loja cujo id é 2</td>
+<td>GET /lojas/2</td>
+</tr>
+<tr>
+<td>Altera dados de uma loja cujo id é 2</td>
+<td>PUT /lojas/2</td>
+</tr>
+<tr>
+<td>Deleta uma loja cujo id é2</td>
+<td>DELETE /lojas/2</td>
+</tr>
+</tbody></table>
+<h2 id='url'>URL</h2>
+<p>Produção: http://api.focuslojas.com.br/</p>
+<h2 id='respostas'>Respostas</h2>
+<p>As chamadas HTTP devolvem as informações em formato JSON.</p>
+
+<p>A reposta do status HTTP também é significativa. Se o status de resposta for 200 (Ok) significa que a solicitação foi executada com sucesso. Quando um novo recurso é criado, o status devolvido é o 201 (Created). Uma solicitação com erro (por exemplo, tentar criar um estabelecimento sem o CNPJ ou CPF) resulta no status 422 (Unprocessable Entity).</p>
+<h2 id='autenticacao'>Autenticação</h2>
+<p>Os mecanismos de autenticação são baseados em um access token secreto que é criado para cada loja que irá acessar o sistema e associado ao seu número de série. Pode ser criado um token de acesso e um número de série que não esteja associado a uma loja física, para representar uma unidade administrativa, por exemplo. Desta forma, todas as requisições feitas a API deverão conter os parâmetros <strong>access_token</strong> e <strong>serial_number</strong> preenchidos.</p>
+
+<p>Ainda é necessário que se passe a versão da API implementada através do parâmetro <strong>api_version</strong>.</p>
+
+<p>A integridade e sigilo são garantidas a partir do protocolo HTTPS.</p>
+
+<table><thead>
+<tr>
+<th>Parâmetros</th>
+<th>Valor</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>access_token</td>
+<td>Token secreto da loja.</td>
+</tr>
+<tr>
+<td>serial_number</td>
+<td>Número de série da loja.</td>
+</tr>
+<tr>
+<td>api_version</td>
+<td>Versão da API. Atualmente, aceita apenas &#39;1&#39;.</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Exemplo de consulta:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>
+curl <span class="nt">-H</span> <span class="s1">'Authorization: Token token=TOKEN_AQUI, serial_number=NUMERO_DE_SERIE, api_version=1'</span> https://app.focuslojas.com.br/customers.json
+
+</code></pre></div><h2 id='formato-do-json-de-entrada'>Formato do JSON de entrada</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Exemplo</span><span class="w"> </span><span class="err">objeto</span><span class="w"> </span><span class="err">simples</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"campo_1"</span><span class="p">:</span><span class="s2">"valor_1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campo_2"</span><span class="p">:</span><span class="s2">"valor_2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campo_n"</span><span class="p">:</span><span class="s2">"valor_3"</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>O JSON de entrada de um modelo chamado &quot;model&quot; com campos &quot;campo_1&quot;, &quot;campo_2&quot;, ..., &quot;campo_n&quot; deverá ser enviado como um objeto com a chave &quot;model&quot; conforme exemplo.</p>
+<h3 id='campos-de-objetos-aninhados'>Campos de objetos aninhados</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Exemplo</span><span class="w"> </span><span class="err">com</span><span class="w"> </span><span class="err">objeto</span><span class="w"> </span><span class="err">aninhado:</span><span class="w"> </span><span class="err">master-detail</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"campo_1"</span><span class="p">:</span><span class="s2">"valor_1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campo_2"</span><span class="p">:</span><span class="s2">"valor_2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campo_n"</span><span class="p">:</span><span class="s2">"valor_n"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"model_items_attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"campo_item_1"</span><span class="p">:</span><span class="s2">"valor_item_1"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"campo_item_n"</span><span class="p">:</span><span class="s2">"valor_item_n"</span><span class="p">,</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Objetos aninhados quando enviados junto com o objeto relacionado, deverão ter o sufixo &quot;_attributes&quot;. Eventualmente alguns endpoints podem disponibilizar metadados nesta estrutura.</p>
+<h2 id='formato-do-json-de-resposta'>Formato do JSON de resposta</h2>
+<p>De forma análoga, a resposta também irá conter uma chave indexando um objeto. Esta chave pode estar no plural caso o endpoint seja para listar mais de um objeto ou no singular caso seja a busca de um objeto apenas.</p>
+<h3 id='objetos-relacionados'>Objetos relacionados</h3><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">//</span><span class="w"> </span><span class="err">Exemplo</span><span class="w"> </span><span class="err">com</span><span class="w"> </span><span class="err">objeto</span><span class="w"> </span><span class="err">aninhado:</span><span class="w"> </span><span class="err">master-detail</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"model_items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"campo_item_1"</span><span class="p">:</span><span class="s2">"valor_item_1"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"campo_item_n"</span><span class="p">:</span><span class="s2">"valor_item_n"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">124</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"campo_item_1"</span><span class="p">:</span><span class="s2">"valor_item_A"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"campo_item_n"</span><span class="p">:</span><span class="s2">"valor_item_Z"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"model"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"campo_1"</span><span class="p">:</span><span class="s2">"valor_1"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campo_2"</span><span class="p">:</span><span class="s2">"valor_2"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"campo_n"</span><span class="p">:</span><span class="s2">"valor_n"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"model_item_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="mi">123</span><span class="p">,</span><span class="w"> </span><span class="mi">124</span><span class="w"> </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Ao buscar objetos que contém outros objetos aninhados (relação de um para muitos) o objeto principal irá conter uma lista de ids apontando para o objeto correspondente.</p>
+<h3 id='paginacao'>Paginação</h3>
+<p>Ao buscar uma coleção de objetos , a API por default devolve 30 registros por vez. É incluída a chave &quot;meta&quot; que inclui uma variável chamada &quot;total&quot; com o número de registros da consulta.</p>
+
+<p>A próxima página da consulta pode ser acessada indicando o parâmetro offset na URL, por exemplo:</p>
+
+<ul>
+<li>Página 1: http://api.focuslojas.com.br/customers.json</li>
+<li>Página 2: http://api.focuslojas.com.br/customers.json?offset=30</li>
+<li>Página 3: http://api.focuslojas.com.br/customers.json?offset=60</li>
+</ul>
+<h2 id='facilidades-de-sincronizacao'>Facilidades de sincronização</h2>
+<p>A sincronização entre sistemas oferece alguns desafios, por isso usamos duas funcionalidades que ajudam a tornar a sincronização mais fácil do que apenas usar as operações convencionais de um CRUD.</p>
+<h3 id='enviando-dados-sincronizacao-com-id-original'>Enviando dados: Sincronização com ID original</h3>
+<p>Quando temos o mesmo dado em dois sistemas distintos, normalmente é necessário algum tipo de mapeamento de identificadores dos registros em cada sistema para poder fazer a sincronização com sucesso. Nos modelos mais importantes este mapeamento é feito do lado da API.</p>
+
+<p>Alguns modelos contém um campo chamado &quot;original_id&quot;, cuja significado é o &quot;id que originou este registro&quot;. Por exemplo, normalmente o sistema terceiro já contém uma base de produtos ou uma base de clientes, desta forma, o id original será o identificador usado no sistema terceiro. Ao criar um registro com este campo, a API primeiramente verifica se este registro com o original_id especificado já existe, caso positivo, atualiza o registro, caso contrário ele é criado.</p>
+
+<p>O campo original_id pode ser utilizado também em chaves estrangeiras. Por exemplo, um &quot;KitItem&quot; faz referência a um &quot;Product&quot;, podemos referencia-lo tanto usando product_id quanto original_product_id . Neste último caso será buscado o produto pelo seu id original.</p>
+
+<p>Com este mecanismo temos uma operação de criação idempotente, ou seja, independente de quantas vezes a requisição for enviada, ela terá o mesmo resultado. Isto pode simplificar bastante a sincronização do lado do sistema terceiro.</p>
+<h3 id='recebendo-dados-entendendo-o-campo-de-versao'>Recebendo dados: Entendendo o campo de versão</h3>
+<p>Quando é feita sincronização entre dois sistemas, nem sempre é interessante fazer busca paginada de objetos, pois normalmente temos interesse apenas nos registros novos (que o sistema terceiro não conhece). Isto é útil para os modelos que são gerados como resultado das operações do Focus Lojas, como por exemplo a movimentação de caixa ou as próprias vendas recebidas.</p>
+
+<p>Para este tipo de sincronização, nós incluímos um campo chamado &quot;version&quot; (versão). Cada registro salvo incrementa uma versão global ao conjunto de lojas. Desta forma, o sistema terceiro precisa apenas armazenar a última versão de seu conhecimento para cada conjunto de lojas (de uma mesma propriedade). Por exemplo:</p>
+
+<p>Para buscar todas as vendas deve-se chamar o endpoint http://api.focuslojas.com.br/sales.json?version=0. Ao fim do processamento desta lista, o sistema terceiro deverá armazenar o último version que foi importado. Caso seja o version=123 a próxima consulta deverá ser http://api.focuslojas.com.br/sales.json?version=123 que irá buscar apenas as versões maiores que 123, e assim por diante.</p>
+<h2 id='formato-desta-documentacao'>Formato desta documentação</h2>
+<p>O restante desta documentação está organizada como uma referência de modelos disponíveis via API. São listadas as operações possíveis, seus campos e quaisquer observações ou cuidados especiais.</p>
+<h1 id='departamentos'>Departamentos</h1>
+<p>Departamento é uma grande divisão da loja, por exemplo, &#39;Adulto&#39;, &#39;Infantil&#39; e &#39;Cama, mesa e banho&#39; podem ser considerados departamentos. São divisões do ponto de vista do cliente final. Seu uso é opcional.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/departments.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/departments.json</td>
+<td>Consulta de departamentos.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/departments/ID.json</td>
+<td>Consulta de um departamento.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/departments.json</td>
+<td>Criação de uma novo departamento.</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/departments/ID.json</td>
+<td>Alteração de departamento.</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador (apenas leitura)</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome do departamento.</td>
+</tr>
+</tbody></table>
+<h1 id='tipos-de-produto'>Tipos de produto</h1>
+<p>Este recurso representa o tipo de um produto. Normalmente é uma classificação interna da constituição do produto (ex: calça, blusa, etc.). Normalmente é de mais interesse do lojista (como organização interna) do que do consumidor final.
+Seu uso é opcional.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/product_types.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/product_types.json</td>
+<td>Consulta de tipos de produto.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/product_types/ID.json</td>
+<td>Consulta de um tipo.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/product_types.json</td>
+<td>Criação de uma novo tipo.</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/product_types/ID.json</td>
+<td>Alteração de tipo.</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campos</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>integer</td>
+<td>id</td>
+<td>Identificador do registro (apenas leitura)</td>
+</tr>
+<tr>
+<td>string</td>
+<td>name</td>
+<td>Nome do tipo do produtos</td>
+</tr>
+</tbody></table>
+<h1 id='variacoes'>Variações</h1>
+<p>Este recurso representa uma dimensão dos itens de grade de um produto (ex: cor, tamanho, etc). Cada produto pode utilizar no máximo 3 dimensões. Normalmente cada dimensão especifica um produto de mesmo preço, mas isto pode ser configurável. Seu uso é opcional, mas muito comum em segmentos como vestuário.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/dimensions</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/dimensions</td>
+<td>Consulta todas as variações cadastradas.</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">//Exemplo</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">dado</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">entrada</span><span class="w">
+</span><span class="p">{</span><span class="w">
+   </span><span class="nl">"dimension"</span><span class="p">:{</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="s2">"Cor"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"values_attributes"</span><span class="p">:[</span><span class="w">
+         </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"Branco"</span><span class="w">
+         </span><span class="p">},</span><span class="w">
+         </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"Azul"</span><span class="w">
+         </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+   </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="err">//Exemplo</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">resultado</span><span class="w"> </span><span class="err">de</span><span class="w"> </span><span class="err">consulta</span><span class="w">
+</span><span class="p">{</span><span class="w">
+  </span><span class="nl">"dimension_values"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Azul"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"dimension_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"domain_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Branco"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">14</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"dimension_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"domain_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="nl">"dimension"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cor"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"domain_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"value_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="mi">1</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campos</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>integer</td>
+<td>id</td>
+<td>Identificador do registro (apenas leitura)</td>
+</tr>
+<tr>
+<td>string</td>
+<td>name</td>
+<td>Nome da dimensão</td>
+</tr>
+<tr>
+<td>Array</td>
+<td>values</td>
+<td>Array de valores da variação</td>
+</tr>
+</tbody></table>
+
+<p>Cada valor da variação pode conter:</p>
+
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campos</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>id</td>
+<td>Identificador do registro (apenas leitura)</td>
+</tr>
+<tr>
+<td>string</td>
+<td>value</td>
+<td>valor da dimensão</td>
+</tr>
+</tbody></table>
+<h2 id='consulta'>Consulta</h2>
+<p>Para consultar todos os cadastros de variações utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).</p>
+
+<p><code>http://api.focuslojas.com.br/dimensions</code></p>
+
+<p>Utilize o comando HTTP <strong>GET</strong> nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu <a href="#campos">Campos</a>.</p>
+
+<p>Ao lado você pode visualizar como é o JSON de resposta da nossa API.</p>
+
+<blockquote>
+<p>JSON enviado pela API Focus Lojas como resposta da consulta.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div><h2 id='erros'>Erros</h2><h1 id='fornecedores'>Fornecedores</h1>
+<p>Este recurso represente o cadastro de um fornecedor. Cada produto possui necessariamente um fornecedor, também é usado para representar a marca do produto. Seu uso é obrigatório, mas ao criar uma rede de loja é criado um fornecedor default cujo nome é o nome da rede de lojas.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: sim</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/suppliers.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/suppliers.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/suppliers/ID.json</td>
+<td>Consulta de registro específico</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/suppliers.json</td>
+<td>Criação de um novo registro</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/suppliers/ID.json</td>
+<td>Alteração de um registro</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>id</td>
+<td>Identificador do sistema.</td>
+</tr>
+<tr>
+<td>int</td>
+<td>original_id</td>
+<td>Identificador externo.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>legal_type*</td>
+<td>&quot;LEGAL&quot; para pessoa jurídica ou &quot;NATURAL&quot; para pessoa física.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>name*</td>
+<td>Nome, se pessoa física, ou nome fantasia, para pessoa jurídica.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cnpj</td>
+<td>CNPJ, apenas para pessoas jurídicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cpf</td>
+<td>CPF, apenas para pessoas físicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>inscricao_estadual</td>
+<td>Inscrição estadual, apenas para pessoas jurídicas.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>isento_inscricao_estadual</td>
+<td>Informa se a pessoa jurídica é isenta da inscrição estadual.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cep</td>
+<td>CEP.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>contact_name</td>
+<td>Nome do contato, apenas para pessoas jurídicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>rg</td>
+<td>R.G., apenas para pessoas físicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>razao_social</td>
+<td>Razão social, apenas para pessoas jurídicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>brand_name*</td>
+<td>Nome da marca que o fornecedor representa.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>web_address</td>
+<td>Endereço da página web do fornecedor.</td>
+</tr>
+</tbody></table>
+<h1 id='produtos'>Produtos</h1>
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: sim</li>
+</ul>
+
+<p>Este recurso representa um produto ou um conjunto de produtos que diferem apenas pelo seus valores de grade. Uma grade é uma dimensão do produto que pode assumir um conjunto de valores. Um exemplo de grade é &quot;cor&quot;, que define a cor do produto, que pode assumir os valores &quot;azul, preto, verde ou vermelho&quot;. A definição das grades e valores possíveis deve ser feita antes de cadastrar o produto utilizando o recurso <a href="#Variações">dimensions</a>. Cada produto aceita no máximo 3 valores de grade. Desta maneira podemos cadastrar uma hierarquia como esta:</p>
+
+<ul>
+<li>Blusa feminina da marca ACME (Agrupador)
+
+<ol>
+<li>Cor preta, tamanho P (Item de grade)</li>
+<li>Cor preta, tamanho M (Item de grade)</li>
+<li>Cor vermelha, tamanho P (Item de grade)</li>
+<li>Cor vermelha, tamanho M (Item de grade)</li>
+</ol></li>
+</ul>
+
+<p>O produto é usado para representar tanto o agrupador quanto o item de grade. Isto é feito usando os seguintes campos:</p>
+<h3 id='agrupador'>Agrupador</h3>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador do agrupador</td>
+</tr>
+<tr>
+<td>use_dimentions</td>
+<td>true (indica que utiliza grade)</td>
+</tr>
+<tr>
+<td>dimension1_id</td>
+<td>Identificador da dimensão 1</td>
+</tr>
+<tr>
+<td>dimension2_id</td>
+<td>Identificador da dimensão 2</td>
+</tr>
+<tr>
+<td>dimension3_id</td>
+<td>Identificador da dimensão 3</td>
+</tr>
+</tbody></table>
+<h3 id='item-de-grade'>Item de grade</h3>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador do item de grade</td>
+</tr>
+<tr>
+<td>main_product_id</td>
+<td>Identificador do produto agrupador</td>
+</tr>
+<tr>
+<td>use_dimensions</td>
+<td>false</td>
+</tr>
+<tr>
+<td>dimension1_value_id</td>
+<td>Valor da dimensão 1 definida pelo agrupador</td>
+</tr>
+<tr>
+<td>dimension2_value_id</td>
+<td>Valor da dimensão 2 definida pelo agrupador</td>
+</tr>
+<tr>
+<td>dimension3_value_id</td>
+<td>Valor da dimensão 3 definida pelo agrupador</td>
+</tr>
+</tbody></table>
+
+<p>Outros campos são copiados automaticamente do produto agrupador</p>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/products.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/products.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/products/ID.json</td>
+<td>Consulta de registro específico</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/products.json</td>
+<td>Criação de um novo registro</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/products/ID.json</td>
+<td>Alteração de um registro</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campos</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>id</td>
+<td>Identificador do produto agrupador ou item de grade</td>
+</tr>
+<tr>
+<td>string</td>
+<td>code</td>
+<td>Referência do produto</td>
+</tr>
+<tr>
+<td>string</td>
+<td>barcode</td>
+<td>Código de barras</td>
+</tr>
+<tr>
+<td>string</td>
+<td>description*</td>
+<td>Descrição do produto</td>
+</tr>
+<tr>
+<td>int</td>
+<td>supplier_id*</td>
+<td>Identificador do fornecedor - Pode ser utilizado o campo original_supplier_id em substituição a este</td>
+</tr>
+<tr>
+<td>int</td>
+<td>department_id</td>
+<td>Identificador da seção</td>
+</tr>
+<tr>
+<td>int</td>
+<td>collection_id</td>
+<td>Identificador da coleção</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>floating_quantities</td>
+<td></td>
+</tr>
+<tr>
+<td>bool</td>
+<td>keep_separated</td>
+<td></td>
+</tr>
+<tr>
+<td>string</td>
+<td>price_label</td>
+<td>Rótulo de preço</td>
+</tr>
+<tr>
+<td>string</td>
+<td>measurement_unit</td>
+<td>Unidade de medida</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>ignore_stock_control</td>
+<td>Informa se ignora controle de estoque</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>average_cost</td>
+<td>Custo médio</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>price*</td>
+<td>Preço</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>wholesale_price</td>
+<td>Preço de atacado</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>use_dimensions</td>
+<td>Informa se utiliza valores de grade</td>
+</tr>
+<tr>
+<td>int</td>
+<td>main_product_id</td>
+<td>(Apenas para itens de grade) Informa identificador do agrupador</td>
+</tr>
+<tr>
+<td>int</td>
+<td>product_type_id</td>
+<td>Identificador do tipo de produto</td>
+</tr>
+<tr>
+<td>int</td>
+<td>dimension1_id</td>
+<td>(Apenas para agrupador) Identificador da dimensão 1</td>
+</tr>
+<tr>
+<td>int</td>
+<td>dimension2_id</td>
+<td>(Apenas para agrupador) Identificador da dimensão 2</td>
+</tr>
+<tr>
+<td>int</td>
+<td>dimension3_id</td>
+<td>(Apenas para agrupador) Identificador da dimensão 3</td>
+</tr>
+<tr>
+<td>int</td>
+<td>dimension1_value_id</td>
+<td>(Apenas para item de grade) Identificador do valor da dimensão 1</td>
+</tr>
+<tr>
+<td>int</td>
+<td>dimension2_value_id</td>
+<td>(Apenas para item de grade) Identificador do valor da dimensão 2</td>
+</tr>
+<tr>
+<td>int</td>
+<td>dimension3_value_id</td>
+<td>(Apenas para item de grade) Identificador do valor da dimensão 3</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cfop_venda_dentro_estado</td>
+<td>CFOP para venda dentro do estado</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cfop_venda_fora_estado</td>
+<td>CFOP para venda fora do estado</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cfop_remessa_consignacao</td>
+<td>CFOP para remessa de consignação</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cfop_devolucao_consignacao</td>
+<td>CFOP para devolução de consignação</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cfop_venda_consig_dentro_estado</td>
+<td>CFOP para venda consignada dentro do estado</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cfop_venda_consig_fora_estado</td>
+<td>CFOP para venda consignada fora do estado</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cfop_devolucao_fornecedor_dentro</td>
+<td>CFOP para devolução a fornecedor dentro do estado</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cfop_devolucao_fornecedor_fora</td>
+<td>CFOP para devolução a fornecedor fora do estado</td>
+</tr>
+<tr>
+<td>string</td>
+<td>capitulo_ncm</td>
+<td>Capítudo da NCM</td>
+</tr>
+<tr>
+<td>string</td>
+<td>codigo_ncm_efetivo</td>
+<td>Código da NCM</td>
+</tr>
+<tr>
+<td>string</td>
+<td>gtin</td>
+<td>GTIN do produto, opcional.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>gtin_efetivo</td>
+<td>GTIN. Apenas leitura. Mostrará barcode se ele for um GTIN válido, caso contrário devolverá o campo GTIN. Se este também não estiver presente, devolve a string &quot;SEM GTIN&quot;.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>codigo_cest</td>
+<td>Código CEST</td>
+</tr>
+<tr>
+<td>int</td>
+<td>icms_origem</td>
+<td>Origem do produto, conforme regulamentação do ICMS: <strong>0</strong> - Nacional,<strong>1</strong> - Estrangeira - Importação direta,<strong>2</strong> - Estrangeira - Adquirida no mercado interno,<strong>3</strong> - Nacional com mais de 40% de conteúdo estrangeiro,<strong>4</strong> - Nacional - Processos Produtivos Básicos,<strong>5</strong> - Nacional com menos de 40% de conteúdo estrangeiro,<strong>6</strong> - Estrangeira por importação direta que não tem similar nacional,<strong>7</strong> - Estrangeira adquirida no mercado interno e que não tem similar nacional</td>
+</tr>
+<tr>
+<td>string</td>
+<td>active</td>
+<td>Indica se cliente esta ativo ou não (default: verdadeiro)</td>
+</tr>
+<tr>
+<td>string</td>
+<td>IAT</td>
+<td>Indicador de Arredondamento ou Truncamento</td>
+</tr>
+<tr>
+<td>string</td>
+<td>IPPT</td>
+<td>Indicador de Produção Própria ou Terceirizada</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>adquirido_com_st</td>
+<td>Indica se o produto foi adquirido com substituição tributária</td>
+</tr>
+<tr>
+<td>string</td>
+<td>codigo_beneficio_fiscal</td>
+<td>8 caracteres exatos. Indica o código do benefício fiscal para produtos não tributados, isentos ou imunes. Alguns estados não utilizam ainda este campo.</td>
+</tr>
+</tbody></table>
+
+<p>(*) Indica campos obrigatórios.</p>
+<h1 id='kits'>Kits</h1>
+<p>Este recurso representa o cadastro de um kit de produtos. Seu uso é opcional.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: sim</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/kits.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/kits.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/kits/ID.json</td>
+<td>Consulta de registro específico</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/kits.json</td>
+<td>Criação de um novo registro</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/kits/ID.json</td>
+<td>Alteração de um registro</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>id</td>
+<td>Identificador do sistema.</td>
+</tr>
+<tr>
+<td>int</td>
+<td>original_id</td>
+<td>Identificador externo.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>code</td>
+<td>Referência do kit (será criada automaticamente se não informada).</td>
+</tr>
+<tr>
+<td>string</td>
+<td>barcode</td>
+<td>Código de barras do kit (será criado automaticamente se não informadao).</td>
+</tr>
+<tr>
+<td>string</td>
+<td>name*</td>
+<td>Nome do kit.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>active*</td>
+<td>Indica se o kit esta ativo ou não.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>items_attributes*</td>
+<td>Lista de items que compõe o produto. Cada item do array pode conter os campos abaixo.</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-items_attributes'>Campos da lista items_attributes</h3>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>product_id** - Referência do produto - Pode ser substituído pelo campo original_product_id</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>supplier_id** - Referência do fornecedor</td>
+<td></td>
+</tr>
+<tr>
+<td>str</td>
+<td>code** - referência do produto</td>
+<td></td>
+</tr>
+<tr>
+<td>int</td>
+<td>quantity* - Quantidade do produto</td>
+<td></td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>price* - Preço do produto</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p>(*) Campos obrigatórios.</p>
+
+<p>Para identificação do produto que compõe o kit pode ser informado o <strong>product_id</strong>, o <strong>original_product_id</strong> ou o par code e <strong>supplier_id</strong>.</p>
+<h2 id='observacoes'>Observações</h2>
+<p>Sempre que um kit for atualizado deverá ser passado novamente todos os itens que compõe o kit. O sistema irá verificar se houve diferença entre os itens e irá desativar automaticamente os itens que não existem mais.</p>
+<h1 id='clientes'>Clientes</h1>
+<p>Representa um cliente no sistema. Uma venda pode ou não conter um cliente. Muitos dos campos são iguais ao de fornecedor.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/customers.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/customers.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/customers/ID.json</td>
+<td>Consulta de registro específico</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/customers.json</td>
+<td>Criação de um registro</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/customers/ID.json</td>
+<td>Alteração de um registro.</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<p>Abaixo descrevemos todos os campos possíveis para criação, consulta ou alteração de cadastro de clientes.</p>
+
+<p>Inicialmente, vamos considerar os campos presentes na estrutura raíz do JSON, onde serão encontrados os arrays abaixo:</p>
+
+<blockquote>
+<p>Exemplo de como os campos são exibidos na raíz do JSON (omitimos os valores dos arrays):</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
+</span><span class="p">{</span><span class="w">
+    </span><span class="nl">"contact_infos"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"pais"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"municipio"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"installment_credits"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"related_people"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Grupo / Lista</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>contact_infos</td>
+<td>Lista de informações de contato (ver contact_infos).</td>
+</tr>
+<tr>
+<td>addresses</td>
+<td>Lista com os dados do endereço (ver addresses).</td>
+</tr>
+<tr>
+<td>pais</td>
+<td>Lista com as informações do(s) país().</td>
+</tr>
+<tr>
+<td>municipio</td>
+<td>Lista com os dados do(s) município(s).</td>
+</tr>
+<tr>
+<td>customers</td>
+<td>Lista com os dados do(s) cliente(s).</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-contact_infos'>Campos da lista contact_infos</h3>
+<p>Este grupo de campos armazena os dados dos contatos de um cliente, retornando as seguintes informações nas consultas:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="w"> </span><span class="nl">"contact_infos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2416600</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"seu-email@email.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2418501</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Número de identificação único para este registro.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Valor referente ao tipo de contato cadastrado.</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Comentário sobre este contrato.</td>
+</tr>
+<tr>
+<td>contact_type</td>
+<td>Tipo do contato, podendo ser: <strong>email</strong>, <strong>cellphone</strong>, <strong>phone</strong>, <strong>fax</strong> ou <strong>other</strong>.</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-addresses'>Campos da lista addresses</h3>
+<p>Este grupo de campos armazena os dados do endereço do cliente, retornando as seguintes informações nas consultas:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="nl">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1597842</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"logradouro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Avenida interventor Manoel ribas"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"numero"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"complemento"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bairro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="s2">"86600137"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"address_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"person_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1122790</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"domain_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3572</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pais_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"municipio_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4052</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Número de identificação único para este registro.</td>
+</tr>
+<tr>
+<td>logradouro</td>
+<td>Logradouro.</td>
+</tr>
+<tr>
+<td>numero</td>
+<td>Número do logradouro.</td>
+</tr>
+<tr>
+<td>complemento</td>
+<td>Complemento do endereço.</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>Bairro.</td>
+</tr>
+<tr>
+<td>cep</td>
+<td>CEP.</td>
+</tr>
+<tr>
+<td>address_type</td>
+<td>Tipo do endereço.</td>
+</tr>
+<tr>
+<td>person_id</td>
+<td>Número de identificação único do cliente.</td>
+</tr>
+<tr>
+<td>domain_id</td>
+<td>Número de itenficação único da loja.</td>
+</tr>
+<tr>
+<td>pais_id</td>
+<td>Número de itenficação único do país.</td>
+</tr>
+<tr>
+<td>municipio_id</td>
+<td>Número de itenficação único do município.</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-pais'>Campos da lista pais</h3>
+<p>Este grupo de campos armazena os dados do país do cliente, retornando as seguintes informações nas consultas:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="nl">"pais"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRASIL"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Número de identificação único para este registro.</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome do país.</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-municipio'>Campos da lista municipio</h3>
+<p>Este grupo de campos armazena os dados do município do cliente, retornando as seguintes informações nas consultas:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="nl">"municipio"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4052</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paraná"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sigla_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PR"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_municipio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rolândia"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_and_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rolândia - PR"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"codigo_municipio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4122404"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"item_lista_servico_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Número de identificação único para este registro.</td>
+</tr>
+<tr>
+<td>nome_uf</td>
+<td>Nome por extensão do Estado.</td>
+</tr>
+<tr>
+<td>sigla_uf</td>
+<td>Sigla do Estado.</td>
+</tr>
+<tr>
+<td>nome_municipio</td>
+<td>Nome da cidade.</td>
+</tr>
+<tr>
+<td>nome_and_uf</td>
+<td>Nome da cidade e sigla da UF, separados por um traço.</td>
+</tr>
+<tr>
+<td>codigo_municipio</td>
+<td>Código da cidade com base nos dados do IBGE.</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-customers'>Campos da lista customers</h3>
+<p>Este grupo de campos armazena os dados do cliente, retornando as seguintes informações nas consultas:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1122790</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99997942000185"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cnpj_emissao"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contact_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999825072"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_municipal"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_suframa"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isento_inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isento_inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"legal_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T. Boito e Rigolton ME"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"razao_social"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T. Boito e Rigolton ME"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"regime_simples_nacional"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"web_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"f_store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"operator_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"blocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"reason_blocked"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-08-14T14:05:50-03:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-08-14T14:05:50-03:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">11934</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"enable_installment_credit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"nfe_address_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PR"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name_and_document"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T. Boito e Rigolton ME 21.987.942/0001-85"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contact_info_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="mi">2412500</span><span class="p">,</span><span class="w">
+            </span><span class="mi">2412501</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"address_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="mi">1597842</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"sale_type_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"installment_credit_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"related_person_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"saas_price_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contract_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>id</td>
+<td>Identificador do sistema.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>active</td>
+<td>Indica se cliente esta ativo ou não (padrão: verdadeiro).</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cep</td>
+<td>CEP.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cnpj</td>
+<td>CNPJ, apenas para pessoas jurídicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cnpj_emissao</td>
+<td>CNPJ para emissão de documentos fiscais</td>
+</tr>
+<tr>
+<td>string</td>
+<td>comment</td>
+<td>Observações sobre o cliente</td>
+</tr>
+<tr>
+<td>string</td>
+<td>contact_name</td>
+<td>Nome do contato, apenas para pessoas jurídicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>cpf</td>
+<td>CPF, apenas para pessoas físicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>inscricao_estadual</td>
+<td>Inscrição estadual, apenas para pessoas jurídicas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>inscricao_estadual_emissao</td>
+<td>IE para emissão de documentos fiscais, quando diferente da IE principal</td>
+</tr>
+<tr>
+<td>string</td>
+<td>inscricao_municipal</td>
+<td>inscrição municipal</td>
+</tr>
+<tr>
+<td>string</td>
+<td>inscricao_suframa</td>
+<td>inscrição na zona franca de Manaus</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>isento_inscricao_estadual</td>
+<td>Informa se a pessoa jurídica é isenta da inscrição estadual.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>isento_inscricao_estadual_emissao</td>
+<td></td>
+</tr>
+<tr>
+<td>string</td>
+<td>legal_type</td>
+<td>&quot;LEGAL&quot; para pessoa jurídica ou &quot;NATURAL&quot; para pessoa física.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>name</td>
+<td>Nome, se pessoa física, ou nome fantasia, para pessoa jurídica.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>razao_social</td>
+<td>Razão social, apenas para pessoas jurídicas.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>regime_simples_nacional</td>
+<td>Indicador se o cliente é do Regime Tributário Simples Nacional.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>rg</td>
+<td>R.G., apenas para pessoas físicas.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>birthday</td>
+<td>Data de aniversário, se pessoa física.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>special</td>
+<td>Informa se é cliente especial.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>operator_message</td>
+<td>Mensagem ao operador.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>blocked</td>
+<td>Informa se este cliente esta bloqueado.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>reason_blocked</td>
+<td>Se bloqueado, informa a razão.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>gender</td>
+<td>&quot;M&quot; para masculino e &quot;F&quot; para feminino, se pessoa física.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>created_at</td>
+<td>Data de criação do cadastro.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>updated_at</td>
+<td>Data da última alteração no cadastro.</td>
+</tr>
+<tr>
+<td>int</td>
+<td>version</td>
+<td>Número da versão do cadastro.</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>enable_installment_credit</td>
+<td></td>
+</tr>
+<tr>
+<td>string</td>
+<td>name_and_document</td>
+<td>Nome do cliente e seu documento de identificação (CNPJ ou CPF).</td>
+</tr>
+<tr>
+<td>array</td>
+<td>contact_info_ids</td>
+<td>Código de referência dos contatos do cliente.</td>
+</tr>
+<tr>
+<td>array</td>
+<td>address_ids</td>
+<td>Código de referência do endereço.</td>
+</tr>
+<tr>
+<td>int</td>
+<td>store_id</td>
+<td>Identificador interno (no retaguarda) da loja de origem do cliente</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>Exemplo de JSON para criação de um cliente.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"customer"</span><span class="p">:</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Esplugão de homologacao"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"legal_type"</span><span class="p">:</span><span class="s2">"NATURAL"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cpf"</span><span class="p">:</span><span class="s2">"88127738000"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"birthday"</span><span class="p">:</span><span class="s2">"1992-06-05"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"addresses_attributes"</span><span class="p">:</span><span class="w">
+        </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"address_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"logradouro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rua da cascatinha"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"numero"</span><span class="p">:</span><span class="w"> </span><span class="mi">138</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"bairro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"acacias"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"cep"</span><span class="p">:</span><span class="s2">"83550020"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='criacao'>Criação</h2>
+<blockquote>
+<p>Exemplo da resposta da API para criação de cliente:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"contact_infos"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"installment_credits"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"related_people"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1352148</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cnpj"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cnpj_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contact_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cpf"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_municipal"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_suframa"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isento_inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isento_inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"legal_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NATURAL"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nome do usuário"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"razao_social"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"regime_simples_nacional"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"web_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"f_store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"operator_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"blocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"reason_blocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-09-30 11:04:29 -0300"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-09-30 11:04:29 -0300"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">13226</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"enable_installment_credit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"nfe_address_uf"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name_and_document"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Nome do usuário"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contact_info_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"address_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"sale_type_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"installment_credit_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"related_person_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"saas_price_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contract_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.</p>
+<h2 id='consulta'>Consulta</h2>
+<p>Ao lado você pode visualizar como é o JSON de resposta da nossa API.</p>
+
+<blockquote>
+<p>JSON enviado pela API Focus Lojas como resposta da consulta.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"contact_infos"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">        
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1743730</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"logradouro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Albert Street"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"numero"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3640"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"complemento"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bairro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saskatchewan"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="s2">"00000000"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"address_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"person_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1249678</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"domain_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13322</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pais_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"municipio_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5565</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1743734</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"logradouro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alameda Arapoema"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"numero"</span><span class="p">:</span><span class="w"> </span><span class="s2">"659"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"complemento"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bairro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tamboré"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="s2">"06460080"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"address_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"person_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1249735</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"domain_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">13322</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pais_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"municipio_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3866</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"pais"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRASIL"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">39</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CANADA"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"municipio"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">5565</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXTERIOR"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sigla_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EX"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_municipio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXTERIOR"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_and_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EXTERIOR - EX"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"codigo_municipio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9999999"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"item_lista_servico_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3866</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"São Paulo"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sigla_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_municipio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Barueri"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_and_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Barueri - SP"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"codigo_municipio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3505708"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"item_lista_servico_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"installment_credits"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"related_people"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"customers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">        
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1249678</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cnpj"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cnpj_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"inscricao_municipal"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"inscricao_suframa"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isento_inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isento_inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"legal_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NATURAL"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"razao_social"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"regime_simples_nacional"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"web_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"f_store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"operator_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"blocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"reason_blocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-06T11:27:02-03:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-07T09:25:52-03:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">859</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"enable_installment_credit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nfe_address_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"EX"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name_and_document"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_info_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"address_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="mi">1743730</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"sale_type_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"installment_credit_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11841098</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"related_person_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"saas_price_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contract_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1249735</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42581280000976"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cnpj_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cpf"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="s2">"206260006117"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"inscricao_municipal"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"inscricao_suframa"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isento_inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"isento_inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"legal_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"razao_social"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"regime_simples_nacional"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"rg"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"web_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"f_store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"operator_message"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"blocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"reason_blocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-06T15:02:25-03:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-04-06T15:24:41-03:00"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">858</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"enable_installment_credit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nfe_address_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SP"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name_and_document"</span><span class="p">:</span><span class="w"> </span><span class="s2">"NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL 42.581.280/0009-76"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_info_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"address_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="mi">1743734</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"sale_type_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"installment_credit_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">11841166</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"related_person_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+            </span><span class="nl">"saas_price_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contract_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"total"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h3 id='consultando-um-cadastro-especifico'>Consultando um cadastro especifico</h3>
+<p>Para consultar um cadastro de cliente especifico utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).</p>
+
+<p><code>http://api.focuslojas.com.br/customers/ID.json</code></p>
+
+<p>Utilize o comando HTTP <strong>GET</strong> nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu <a href="#campos">Campos</a>.</p>
+
+<p>Ao lado você pode visualizar como é o JSON de resposta da nossa API.</p>
+
+<blockquote>
+<p>JSON enviado pela API Focus Lojas como resposta da consulta.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"contact_infos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2412500</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"seu-email@email.com"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="w">
+        </span><span class="p">},</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2412501</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"contact_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"phone"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"addresses"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1597842</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"logradouro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Avenida interventor Manoel ribas"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"numero"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"complemento"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"bairro"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Centro"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="s2">"86600137"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"address_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"default"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"person_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1122790</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"domain_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">3572</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"pais_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"municipio_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4052</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"pais"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome"</span><span class="p">:</span><span class="w"> </span><span class="s2">"BRASIL"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"municipio"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">4052</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Paraná"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sigla_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PR"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_municipio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rolândia"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"nome_and_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Rolândia - PR"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"codigo_municipio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4122404"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"item_lista_servico_type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"installment_credits"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"related_people"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"contracts"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+    </span><span class="nl">"customer"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1122790</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cep"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cnpj"</span><span class="p">:</span><span class="w"> </span><span class="s2">"99997942000185"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cnpj_emissao"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"comment"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contact_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"cpf"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9069999072"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_municipal"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"inscricao_suframa"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isento_inscricao_estadual"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"isento_inscricao_estadual_emissao"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"legal_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"LEGAL"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T. Boito e Rigolton ME"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"razao_social"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T. Boito e Rigolton ME"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"regime_simples_nacional"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"rg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"web_address"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"f_store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"birthday"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"special"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"operator_message"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"blocked"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"reason_blocked"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"gender"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-08-14T14:05:50-03:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"updated_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-08-14T14:05:50-03:00"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"version"</span><span class="p">:</span><span class="w"> </span><span class="mi">11934</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"enable_installment_credit"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"nfe_address_uf"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PR"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name_and_document"</span><span class="p">:</span><span class="w"> </span><span class="s2">"T. Boito e Rigolton ME 21.987.942/0001-85"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contact_info_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="mi">2412500</span><span class="p">,</span><span class="w">
+            </span><span class="mi">2412501</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"address_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="mi">1597842</span><span class="w">
+        </span><span class="p">],</span><span class="w">
+        </span><span class="nl">"sale_type_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"store_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"installment_credit_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"related_person_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+        </span><span class="nl">"saas_price_id"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"contract_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[]</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h1 id='usuarios-do-pdv'>Usuários do PDV</h1>
+<p>Este recurso represente o cadastro de um usuário do PDV (vendedor, gerente ou administrador). Uma venda possui necessariamente um usuário do PDV (representando o vendedor).</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/pos_users.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/pos_users.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/pos_users/ID.json</td>
+<td>Consulta de registro específico</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/pos_users.json</td>
+<td>Criação de um novo registro</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/pos_users/ID.json</td>
+<td>Alteração de um registro</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>id - Identificador do sistema.</td>
+<td></td>
+</tr>
+<tr>
+<td>string</td>
+<td>name*</td>
+<td>Nome do usuário - É utilizado como chave de atualização, veja os comentários na operação create.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>login*</td>
+<td>Login do usuário, utilizado para acessar o sistema.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>password</td>
+<td>Senha do usuário, assume o valor &quot;123&quot; se não informado.</td>
+</tr>
+<tr>
+<td>int) code</td>
+<td>Código do usuário, criado automaticamente se não informado.</td>
+<td></td>
+</tr>
+<tr>
+<td>string) cpf</td>
+<td>CPF do usuário.</td>
+<td></td>
+</tr>
+<tr>
+<td>bool</td>
+<td>is_admin</td>
+<td>Indica se o usuário é um administrador (terá acesso total ao PDV em todas as lojas).</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>is_manager</td>
+<td>Indica se o usuário é um gerente (terá acesso total ao PDV apenas na loja especificada).</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>is_salesperson</td>
+<td>Indica se o usuário é um vendedor (terá acesso limitado ao PDV apenas na loja especificada).</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>is_cash_drawer_operator</td>
+<td>Indica se o usuário é um caixa (poderá abrir e operar um caixa).</td>
+</tr>
+<tr>
+<td>bool</td>
+<td>active</td>
+<td>Indica se o usuário esta ativo.</td>
+</tr>
+</tbody></table>
+
+<p>(*) Campos obrigatórios.</p>
+<h1 id='vendas'>Vendas</h1>
+<p>Esta seção descreve uma venda realizada no PDV. O PDV utiliza este endpoint para gravação das vendas, e é disponibilizado para sistemas terceiros apenas como consulta.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: sim, mas de uso exclusivo do PDV.</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/sales.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/sales.json</td>
+<td>Consulta todas as vendas</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/sales/ID.json</td>
+<td>Consulta uma venda específica</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Campos</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador do registro.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Número da venda registrado no PDV.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Situação da venda, permite os valores: &#39;realized&#39; (realizado), &#39;canceled&#39; (cancelado pelo retaguarda</td>
+</tr>
+<tr>
+<td>pos_id</td>
+<td>Identificador do PDV.</td>
+</tr>
+<tr>
+<td>pos_user_id</td>
+<td>Identificador do usuário do PDV (vendedor).</td>
+</tr>
+<tr>
+<td>sold_at</td>
+<td>Data e hora da venda no formato ISO8601.</td>
+</tr>
+<tr>
+<td>ccf</td>
+<td>Contador de cupom fiscal.</td>
+</tr>
+<tr>
+<td>coo</td>
+<td>Número do cupom fiscal (Contador de Ordem da Operação).</td>
+</tr>
+<tr>
+<td>consumer_nf_serie</td>
+<td>Série da nota fiscal manual emitida.</td>
+</tr>
+<tr>
+<td>consumer_nf_number</td>
+<td>Número da nf manual emitida.</td>
+</tr>
+<tr>
+<td>total_cost_returned</td>
+<td>Valor de custo total devolvido.</td>
+</tr>
+<tr>
+<td>total_cost_sold</td>
+<td>Valor de custo total vendido.</td>
+</tr>
+<tr>
+<td>total_price_returned</td>
+<td>Valor de venda total devolvido.</td>
+</tr>
+<tr>
+<td>total_price_sold</td>
+<td>Valor de venda total vendido.</td>
+</tr>
+<tr>
+<td>discount</td>
+<td>Desconto da venda.</td>
+</tr>
+<tr>
+<td>credit</td>
+<td>Crédito ao cliente, caso ele tenha pago a maior.</td>
+</tr>
+<tr>
+<td>percent_discount</td>
+<td>Desconto em percentual (0 a 100).</td>
+</tr>
+<tr>
+<td>total_reimbursement</td>
+<td>Valor total do reembolso ao cliente.</td>
+</tr>
+<tr>
+<td>net_value</td>
+<td>Valor líquido da venda (total pago - valor reembolsado - saldo utilizado).</td>
+</tr>
+<tr>
+<td>total_installments</td>
+<td>Somatório do número de parcelas de pagamento recebidas. (Exemplo: pagamento em dinheiro e 2x no cartão resulta em 3 parcelas).</td>
+</tr>
+<tr>
+<td>discount_auth_user_id</td>
+<td>Id do usuário que liberou desconto na venda.</td>
+</tr>
+<tr>
+<td>numero_nfce</td>
+<td>Número da NFCe.</td>
+</tr>
+<tr>
+<td>serie_nfce</td>
+<td>Série da NFCe.</td>
+</tr>
+<tr>
+<td>chave_nfce</td>
+<td>Chave da NFCe.</td>
+</tr>
+<tr>
+<td>protocolo_nfce</td>
+<td>Protocolo da NFCe.</td>
+</tr>
+<tr>
+<td>url_xml_nfce</td>
+<td>URL do XML da NFCe.</td>
+</tr>
+<tr>
+<td>nfce_contingencia</td>
+<td>indica se a nfce foi emitida em contingência offline.</td>
+</tr>
+<tr>
+<td>nfce_contingencia_efetivada</td>
+<td>indica se a emissão em contingência já foi efetivada na receita.</td>
+</tr>
+<tr>
+<td>url_xml_cfe</td>
+<td>URL do xml da CFe emitida por SAT fiscal.</td>
+</tr>
+<tr>
+<td>customer</td>
+<td>Lista de dados do cliente.</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>Lista de dados do PDV.</td>
+</tr>
+<tr>
+<td>pos_entries</td>
+<td>Lista de dados de entradas do PDV (pagamentos).</td>
+</tr>
+<tr>
+<td>sold_items</td>
+<td>Lista de dados dos itens vendidos.</td>
+</tr>
+<tr>
+<td>returned_items</td>
+<td>Lista de dados dos itens devolvidos em uma venda.</td>
+</tr>
+</tbody></table>
+<h2 id='campos-da-lista-customer'>Campos da lista customer</h2>
+<p>Este grupo de campos armazena os dados do cliente, retornando as seguintes informações nas consultas:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador do cliente.</td>
+</tr>
+<tr>
+<td>original_id</td>
+<td>Identificador original do cliente.</td>
+</tr>
+</tbody></table>
+<h2 id='campos-da-lista-pos'>Campos da lista pos</h2>
+<p>Este grupo de campos armazena os dados do PDV, retornando as seguintes informações nas consultas:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>number</td>
+<td>Número do PDV.</td>
+</tr>
+<tr>
+<td>ecf_serial_number</td>
+<td>Número de série.</td>
+</tr>
+</tbody></table>
+<h2 id='campos-da-lista-pos_entries'>Campos da lista pos_entries</h2>
+<p>Este grupo de campos armazena os dados de entradas do PDV (pagamentos), retornando as seguintes informações nas consultas:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>entry_type</td>
+<td>Tipo do pagamento (Dinheiro, Cartão, TEF, Cheque, Carnê ou Saldo Utilizado).</td>
+</tr>
+<tr>
+<td>card_type</td>
+<td>Quando cartão, informa <strong>D</strong> - Débito ou <strong>C</strong> - Crédito.</td>
+</tr>
+<tr>
+<td>num_installments</td>
+<td>Número de parcelas do pagamento.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Valor total do pagamento.</td>
+</tr>
+<tr>
+<td>description</td>
+<td>Descrição.</td>
+</tr>
+<tr>
+<td>tef_identificacao</td>
+<td>Identificação TEF.</td>
+</tr>
+<tr>
+<td>tef_nsu</td>
+<td>NSU do TEF.</td>
+</tr>
+<tr>
+<td>tef_rede</td>
+<td>Rede do TEF.</td>
+</tr>
+<tr>
+<td>tef_finalizacao</td>
+<td>Finalização TEF.</td>
+</tr>
+<tr>
+<td>auth_number</td>
+<td>Número de autorização do TEF.</td>
+</tr>
+<tr>
+<td>card_info_snapshot</td>
+<td>Quando o entry_type = &quot;Cartão&quot;, este nó irá conter as informações do cartão utilizado.</td>
+</tr>
+<tr>
+<td>bonus_id</td>
+<td>id interno no focus lojas do bonus usado, caso o tipo seja Bônus.</td>
+</tr>
+<tr>
+<td>bonus_original_id</td>
+<td>Lista de valores referentes ao Bônus.</td>
+</tr>
+<tr>
+<td>check</td>
+<td>Lista de valores referentes a forma de pagamento Cheque.</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-bonus_original_id'>Campos da lista bonus_original_id</h3>
+<p>Este campo recebe o id externo, quando presente, do bônus usado caso o tipo seja Bônus.</p>
+
+<p>Existem duas listas aqui, são elas:</p>
+
+<ul>
+<li><strong>card_brand</strong>: Contém informações do cartão.
+
+<ol>
+<li>name: Nome (fixo).</li>
+<li>tef_parameter: Parâmetro TEF</li>
+</ol></li>
+<li><strong>card_company</strong>: Contém informações da credenciadora do cartão.
+
+<ol>
+<li>name: Nome (fixo).</li>
+<li>tef_parameter: Parâmetro TEF.</li>
+</ol></li>
+</ul>
+<h3 id='campos-da-lista-check'>Campos da lista check</h3>
+<p>Quando o entry_type = &quot;Cheque&quot;, este nó irá conter as informações do cheque utilizado.</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador do sistema.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>Nome do emitente do cheque.</td>
+</tr>
+<tr>
+<td>cnpj_cpf</td>
+<td>CNPJ ou cpf do emitente.</td>
+</tr>
+<tr>
+<td>bank_num</td>
+<td>Código do banco.</td>
+</tr>
+<tr>
+<td>branch_num</td>
+<td>Número da agência.</td>
+</tr>
+<tr>
+<td>account_num</td>
+<td>Número da conta.</td>
+</tr>
+<tr>
+<td>check_num</td>
+<td>Número do cheque.</td>
+</tr>
+<tr>
+<td>date</td>
+<td>Data do cheque.</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Valor do cheque.</td>
+</tr>
+<tr>
+<td>comment</td>
+<td>Observação.</td>
+</tr>
+<tr>
+<td>cmc7</td>
+<td>CMC7 do cheque.</td>
+</tr>
+</tbody></table>
+<h2 id='campos-da-lista-sold_items'>Campos da lista sold_items</h2>
+<p>Lista contento todos os produtos vendidos, com os seguintes campos:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>quantity</td>
+<td>Quantidade vendida.</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Preço unitário de venda.</td>
+</tr>
+<tr>
+<td>cost</td>
+<td>Preço unitário de custo.</td>
+</tr>
+<tr>
+<td>tax_type</td>
+<td>Tipo de imposto aplicado (I, N, F, T ou S) representando Isento, Não Tributado, Substituição Tributária, Tributado pelo ICMS, Tributado pelo ISSQN, respectivamente.</td>
+</tr>
+<tr>
+<td>tax_rate</td>
+<td>Alíquota do imposto.</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Situação do item, permite os valores: &#39;realized&#39; (realizado), &#39;canceled&#39; (cancelado pelo retaguarda - usado apenas em sistemas não-fiscais), &#39;canceled_pos&#39; (cancelado pelo PDV).</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-product'>Campos da lista product</h3>
+<p>Lista com os dados do produto.</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador do produto</td>
+</tr>
+<tr>
+<td>original_id</td>
+<td>Identificador original</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Referência</td>
+</tr>
+</tbody></table>
+<h2 id='campos-da-lista-returned_items'>Campos da lista returned_items</h2>
+<p>Lista de todos os produtos devolvidos, com os seguintes campos:</p>
+<div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>product</td>
+<td>Lista de dados sobre o produto.</td>
+</tr>
+<tr>
+<td>quantity</td>
+<td>Quantidade vendida</td>
+</tr>
+<tr>
+<td>price</td>
+<td>Preço unitário de venda</td>
+</tr>
+<tr>
+<td>cost</td>
+<td>Preço unitário de custo</td>
+</tr>
+<tr>
+<td>tax_type</td>
+<td>Tipo de imposto aplicado (I, N, F, T ou S) representando Isento, Não Tributado, Substituição Tributária, Tributado pelo ICMS, Tributado pelo ISSQN, respectivamente</td>
+</tr>
+<tr>
+<td>tax_rate</td>
+<td>Alíquota do imposto</td>
+</tr>
+<tr>
+<td>status</td>
+<td>Situação do item, permite os valores: &#39;realized&#39; (realizado), &#39;canceled&#39; (cancelado pelo retaguarda - usado apenas em sistemas não fiscais), &#39;canceled_pos&#39; (cancelado pelo PDV).</td>
+</tr>
+<tr>
+<td>original_sale_info</td>
+<td>Lista de campos sobre a venda onde este que está sendo devolvido foi vendido. (Campo removido na versão 47).</td>
+</tr>
+<tr>
+<td>return_sale</td>
+<td>Lista de informações sobre a venda onde este que está sendo devolvido o que foi vendido</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-product-2'>Campos da lista product</h3>
+<p>Lista com os dados do produto.</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador do produto</td>
+</tr>
+<tr>
+<td>original_id</td>
+<td>Identificador original</td>
+</tr>
+<tr>
+<td>code</td>
+<td>Referência</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-original_sale_info'>Campos da lista original_sale_info</h3>
+<p>Informações sobre a venda onde este que está sendo devolvido foi vendido</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>sale_id</td>
+<td>id da venda em nosso retaguarda</td>
+</tr>
+<tr>
+<td>number</td>
+<td>número da venda original</td>
+</tr>
+<tr>
+<td>store_id</td>
+<td>id da loja em nosso retaguarda</td>
+</tr>
+<tr>
+<td>store_cnpj</td>
+<td>cnpj da loja onde a venda original ocorreu</td>
+</tr>
+<tr>
+<td>coo</td>
+<td>COO da venda original (se venda foi realizada em ECF)</td>
+</tr>
+<tr>
+<td>ccf</td>
+<td>CCF da venda original (se venda foi realizada em ECF)</td>
+</tr>
+<tr>
+<td>numero_nfce</td>
+<td>Número da NFCe da venda original (se venda original foi realizada por NFCe)</td>
+</tr>
+<tr>
+<td>numero_cfe_sat</td>
+<td>Número do cupom SAT da venda original (se venda original foi realizada em SAT)</td>
+</tr>
+<tr>
+<td>cpf</td>
+<td>CPF do consumidor da venda original (se existir)</td>
+</tr>
+<tr>
+<td>cnpj</td>
+<td>CNPJ do consumidor da venda original (se existir)</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-return_sale'>Campos da lista return_sale</h3>
+<p>Informações sobre a venda onde este que está sendo devolvido o que foi vendido:</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>id da venda em nosso retaguarda</td>
+</tr>
+<tr>
+<td>number</td>
+<td>número da venda original</td>
+</tr>
+<tr>
+<td>coo</td>
+<td>COO da venda original (se venda foi realizada em ECF)</td>
+</tr>
+<tr>
+<td>ccf</td>
+<td>CCF da venda original (se venda foi realizada em ECF)</td>
+</tr>
+<tr>
+<td>numero_nfce</td>
+<td>Número da NFCe da venda original (se venda original foi realizada por NFCe)</td>
+</tr>
+<tr>
+<td>serie_nfce</td>
+<td>Série da NFCe da venda original (se venda original foi realizada por NFCe)</td>
+</tr>
+<tr>
+<td>numero_cfe_sat</td>
+<td>Número do cupom SAT da venda original (se venda original foi realizada em SAT)</td>
+</tr>
+<tr>
+<td>store</td>
+<td>Lista de dados referentes a identificação da loja.</td>
+</tr>
+<tr>
+<td>customer</td>
+<td>Lista de dados referentes ao cliente.</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>Lista de dados referentes ao PDV.</td>
+</tr>
+</tbody></table>
+<h4 id='campos-da-lista-store'>Campos da lista store</h4>
+<p>Lista de dados referentes a identificação da loja.</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>id da loja em nosso retaguarda</td>
+</tr>
+<tr>
+<td>cnpj</td>
+<td>cnpj da loja onde a venda original ocorreu</td>
+</tr>
+</tbody></table>
+<h4 id='campos-da-lista-customer-2'>Campos da lista customer</h4>
+<p>Lista de dados referentes ao cliente.</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Id do consumidor no nosso retaguarda</td>
+</tr>
+<tr>
+<td>cpf</td>
+<td>CPF do consumidor da venda original (se existir)</td>
+</tr>
+<tr>
+<td>cnpj</td>
+<td>CNPJ do consumidor da venda original (se existir)</td>
+</tr>
+</tbody></table>
+<h4 id='campos-da-lista-pos-2'>Campos da lista pos</h4>
+<p>Lista de dados referentes ao PDV.</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>id do PDV em nosso retaguarda</td>
+</tr>
+<tr>
+<td>ecf_serial_number</td>
+<td>Número de série do ECF se aplicável</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Número do PDV</td>
+</tr>
+</tbody></table>
+<h1 id='informacoes-de-contato'>Informações de contato</h1>
+<p>Este recurso representa as informações de contato de uma pessoa ou empresa (Cliente ou Fornecedor). Cada pessoa pode ter de zero à N contatos. O uso deste endpoint é opcional, pois ele estes registros podem ser cadastrados diretamente no cadastro de cliente ou fornecedor.</p>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/contact_infos</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/contact_infos</td>
+<td>Consulta de contatos.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/contact_infos</td>
+<td>Criação de uma novo contato.</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>id</td>
+<td>Identificador do sistema.</td>
+</tr>
+<tr>
+<td>int</td>
+<td>person_id</td>
+<td>id da pessoa no sistema.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>contact_type*</td>
+<td>Tipo do contato (&quot;phone&quot;, &quot;email&quot;, &quot;fax&quot;, &quot;cellphone&quot;, &quot;person&quot;, &quot;other&quot;).</td>
+</tr>
+<tr>
+<td>string</td>
+<td>value*</td>
+<td>Valor do contato, exemplos (4199999389, suporte@acras.com.br, João, etc) dependendo do tipo.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>comment</td>
+<td>Observações deste contato.</td>
+</tr>
+<tr>
+<td>integer</td>
+<td>version</td>
+<td>Versão do registro para buscas por registros atualizados.</td>
+</tr>
+</tbody></table>
+
+<p>(*) Campos obrigatórios.</p>
+<h2 id='criacao'>Criação</h2>
+<p>Para criar um novo departamento utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).</p>
+
+<p><code>http://api.focuslojas.com.br/contact_infos</code></p>
+
+<p>Utilize o comando HTTP <strong>POST</strong> para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados abaixo.</p>
+
+<p>Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.</p>
+
+<blockquote>
+<p>Exemplo de JSON para criação de um contato.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div><h2 id='consulta'>Consulta</h2>
+<p>Para consultar os cadastros de departamentos utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).</p>
+
+<p><code>http://api.focuslojas.com.br/contact_infos</code></p>
+
+<p>Utilize o comando HTTP <strong>GET</strong> nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu <a href="#campos">Campos</a>.</p>
+
+<p>Ao lado você pode visualizar como é o JSON de resposta da nossa API.</p>
+
+<blockquote>
+<p>JSON enviado pela API Focus Lojas como resposta da consulta.</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div><h2 id='erros'>Erros</h2><h1 id='reducao-z'>Redução Z</h1>
+<p>Apenas para uso de ECF</p>
+
+<p>Este recurso representa o registro das reduções z armazenados na impressora fiscal (ECF). Recuperamos os dados exatamente como eles estão na impressora, com zeros a esquerda e quantidade fixa de posições (as duas últimas representam os centavos).</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/reducoes_z.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/reducoes_z.json</td>
+<td>Consulta de reduções</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>data_movimento</td>
+<td>Data dos movimentos.</td>
+</tr>
+<tr>
+<td>modo</td>
+<td>Modo.</td>
+</tr>
+<tr>
+<td>cont_reinicio_operacao</td>
+<td>Contador de reinício de operações.</td>
+</tr>
+<tr>
+<td>cont_reducao_z</td>
+<td>Contador de reduções Z.</td>
+</tr>
+<tr>
+<td>cont_ordem_operacao</td>
+<td>Contador de ordem de operação.</td>
+</tr>
+<tr>
+<td>cont_geral_oper_nao_fiscais</td>
+<td>Contador geral de operações não fiscais.</td>
+</tr>
+<tr>
+<td>cont_cupom_fiscal</td>
+<td>Contador de cupom fiscal.</td>
+</tr>
+<tr>
+<td>cont_geral_rel_ger</td>
+<td>Contador geral de relatórios gerenciais.</td>
+</tr>
+<tr>
+<td>cont_fita_detalhe_emitida</td>
+<td>Contador de fita detalhe emitida.</td>
+</tr>
+<tr>
+<td>cont_oper_nao_fiscais_canceladas</td>
+<td>Contador de operações não fiscais canceladas.</td>
+</tr>
+<tr>
+<td>cont_cupom_fiscal_cancelados</td>
+<td>Contador de cupons fiscais cancelados.</td>
+</tr>
+<tr>
+<td>cont_operacaoes_nao_fiscais</td>
+<td>Contador de operações não fiscais.</td>
+</tr>
+<tr>
+<td>cont_especificos_rel_ger</td>
+<td>Contador específicicos de relatório gerencial.</td>
+</tr>
+<tr>
+<td>cont_comp_deb_cred</td>
+<td>Contador de comprovantes de débito/crédito.</td>
+</tr>
+<tr>
+<td>cont_comp_deb_cred_nao_emitido</td>
+<td>Contador de comprovantes de débito/crédito não emitidos.</td>
+</tr>
+<tr>
+<td>cont_comp_deb_cred_cancelados</td>
+<td>Contador de comprovantes de débito/crédito cancelados.</td>
+</tr>
+<tr>
+<td>tot_geral</td>
+<td>Total Geral.</td>
+</tr>
+<tr>
+<td>tot_isencao_icms</td>
+<td>Total de isenção do ICMS.</td>
+</tr>
+<tr>
+<td>tot_nao_incidencia_icms</td>
+<td>Total de não incidência do ICMS.</td>
+</tr>
+<tr>
+<td>tot_subst_trib_icms</td>
+<td>Total de substituição tributára do ICMS.</td>
+</tr>
+<tr>
+<td>tot_isencao_issqn</td>
+<td>Total de isenção do ISSQN.</td>
+</tr>
+<tr>
+<td>tot_nao_incidencia_issqn</td>
+<td>Total de não incidência do ISSQN.</td>
+</tr>
+<tr>
+<td>tot_subst_trib_issqn</td>
+<td>Total de substituição tributária do ISSQN.</td>
+</tr>
+<tr>
+<td>tot_descontos_icms</td>
+<td>Total de descontos do ICMS.</td>
+</tr>
+<tr>
+<td>tot_descontos_issqn</td>
+<td>Total de descontos do ISSQN.</td>
+</tr>
+<tr>
+<td>tot_acrescimos_icms</td>
+<td>Total de acréscimos do ICMS.</td>
+</tr>
+<tr>
+<td>tot_acrescimos_issqn</td>
+<td>Total de acréscimos do ISSQN.</td>
+</tr>
+<tr>
+<td>tot_cancelamentos_icms</td>
+<td>Total de cancelamentos do ICMS.</td>
+</tr>
+<tr>
+<td>tot_cancelamentos_issqn</td>
+<td>Total de cancelamentos do ISSQN.</td>
+</tr>
+<tr>
+<td>tot_parc_nao_sujeitos_icms</td>
+<td>Vetor com totais parciais não sujeitos ao ICMS (sequências de 14 posições).</td>
+</tr>
+<tr>
+<td>tot_sangria</td>
+<td>Total de sangria.</td>
+</tr>
+<tr>
+<td>tot_suprimento</td>
+<td>Total de suprimento.</td>
+</tr>
+<tr>
+<td>tot_cancelamentos_nao_fiscais</td>
+<td>Total de cancelamentos não fiscais.</td>
+</tr>
+<tr>
+<td>tot_descontos_nao_fiscais</td>
+<td>Total de descontos não fiscais.</td>
+</tr>
+<tr>
+<td>tot_acrescimos_nao_fiscais</td>
+<td>Total de acréscimos não fiscais.</td>
+</tr>
+<tr>
+<td>data_hora_reducao</td>
+<td>Data e hora em que foi feita a redução Z.</td>
+</tr>
+<tr>
+<td>tot_geral_inicial</td>
+<td>Campo calculado já em formato decimal - É o totalizador geral no início do dia (igual ao totalizador geral do fim do dia anterior).</td>
+</tr>
+<tr>
+<td>tot_geral_final</td>
+<td>Campo calculado já em formato decimal - É o totalizador geral no final do dia (igual ao totalizador geral).</td>
+</tr>
+<tr>
+<td>venda_bruta</td>
+<td>Campo calculado já em formato decimal - É a venda bruta, calculada como tot_geral_final - tot_geral_inicial.</td>
+</tr>
+<tr>
+<td>numero_mapa_fiscal</td>
+<td>Número do mapa fiscal.</td>
+</tr>
+<tr>
+<td>pos</td>
+<td>Lista com informações do PDV/ECF.</td>
+</tr>
+<tr>
+<td>info_aliquotas</td>
+<td>Lista de informações sobre as alíquotas e totais parciais.</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-pos'>Campos da lista pos</h3>
+<p>Informações do PDV/ECF.</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador do banco de dados.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Número.</td>
+</tr>
+<tr>
+<td>ecf_serial_number</td>
+<td>Número de série do ECF.</td>
+</tr>
+</tbody></table>
+<h3 id='campos-da-lista-info_aliquotas'>Campos da lista info_aliquotas</h3>
+<p>Informações com todas as alíquotas e totais parciais.</p>
+
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>tot_parcial</td>
+<td>Total parcial (Base de cálculo).</td>
+</tr>
+<tr>
+<td>aliq_trib</td>
+<td>Allíquota tributária.</td>
+</tr>
+<tr>
+<td>valor_imposto</td>
+<td>Valor do imposto.</td>
+</tr>
+</tbody></table>
+<h1 id='vale-presente'>Vale Presente</h1>
+<p>Representa um vale presente. Um vale presente pode ser criado externamente ou pelo próprio PDV quando há devolução de alguma venda.</p>
+
+<ul>
+<li>Possui campo version: não</li>
+<li>Possui campo original_id: sim, mas de uso exclusivo do PDV</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/gift_coupons.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/gift_coupons.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/gift_coupons/ID.json</td>
+<td>Consulta de registro específico</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/gift_coupons.json</td>
+<td>Criação de um novo registro</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/gift_coupons/ID.json</td>
+<td>Alteração de um registro</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<p>Abaixo todos os campos usados para vale presente:</p>
+
+<table><thead>
+<tr>
+<th>Tipo do valor</th>
+<th>Campos</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>id</td>
+<td>Identificador do sistema.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>description</td>
+<td>Descrição opcional deste vale presente.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>code</td>
+<td>O código do bônus composto por 12 caracteres (Não é necessário informar o código na criação do bônus pois o Focus Lojas se encarrega desta criação).</td>
+</tr>
+<tr>
+<td>date</td>
+<td>valid_until*</td>
+<td>Data de validade deste vale presente.</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>value*</td>
+<td>Valor deste vale presente.</td>
+</tr>
+<tr>
+<td>int</td>
+<td>customer_id*</td>
+<td>Id do cliente no Focus Lojas.</td>
+</tr>
+<tr>
+<td>string</td>
+<td>status*</td>
+<td>Qual o status deste vale presente (valid, void, used).</td>
+</tr>
+<tr>
+<td>date</td>
+<td>used_at</td>
+<td>Se o vale presente já foi usado indica a data em que o uso ocorreu.</td>
+</tr>
+<tr>
+<td>int</td>
+<td>sale_id</td>
+<td>Id da Venda em que foi utilizdo.</td>
+</tr>
+</tbody></table>
+<h1 id='estoque'>Estoque</h1>
+<p>Este modelo representa o estoque de um determinado produto em uma determinada loja. É administrado pela API mas pode ser consultado por sistemas terceiros.
+A quantidade em estoque é sempre referente a um item de variação, quando aplicável, nunca do produto principal.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+</ul>
+<h2 id='url-39-s'>URL&#39;s</h2>
+<p>Produção: http://api.focuslojas.com.br/inventories.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/inventories.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/inventories/ID.json</td>
+<td>Consulta de registro específico</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/inventories.json</td>
+<td>Criação de um novo registro</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/inventories/ID.json</td>
+<td>Alteração de um registro</td>
+</tr>
+</tbody></table>
+<h2 id='campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Tipo de valor</th>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>int</td>
+<td>product_id</td>
+<td>id do produto</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>in_stock_quantity</td>
+<td>quantidade em estoque da loja</td>
+</tr>
+<tr>
+<td>decimal</td>
+<td>sold_quantity</td>
+<td>quantidade vendida do produto</td>
+</tr>
+</tbody></table>
+
+      </div>
+      <div class="dark-box">
+          <div class="lang-selector">
+                <a href="#" data-language-name="shell">shell</a>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>
