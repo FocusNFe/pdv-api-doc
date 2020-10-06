@@ -8,7 +8,7 @@ Seu uso é opcional.
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/product_types.json
+Produção: http://celero.focuslojas.com.br/product_types.json
 
 Método HTTP | Caminho | Descrição
 --|--|--

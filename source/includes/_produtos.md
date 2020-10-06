@@ -41,7 +41,7 @@ Outros campos são copiados automaticamente do produto agrupador
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/products.json
+Produção: http://celero.focuslojas.com.br/products.json
 
 Método HTTP | Caminho | Descrição
 --|--|--

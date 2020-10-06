@@ -7,7 +7,7 @@ Representa um cliente no sistema. Uma venda pode ou não conter um cliente. Muit
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/customers.json
+Produção: http://celero.focuslojas.com.br/customers.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
@@ -512,7 +512,7 @@ Ao lado você pode visualizar como é o JSON de resposta da nossa API.
 
 Para consultar um cadastro de cliente especifico utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
 
-`http://api.focuslojas.com.br/customers/ID.json`
+`http://celero.focuslojas.com.br/customers/ID.json`
 
 Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
 

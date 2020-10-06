@@ -7,7 +7,7 @@ Departamento é uma grande divisão da loja, por exemplo, 'Adulto', 'Infantil' e
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/departments.json
+Produção: http://celero.focuslojas.com.br/departments.json
 
 Método HTTP | Caminho | Descrição
 --|--|--

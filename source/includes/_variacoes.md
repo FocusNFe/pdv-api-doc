@@ -7,7 +7,7 @@ Este recurso representa uma dimensão dos itens de grade de um produto (ex: cor,
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/dimensions
+Produção: http://celero.focuslojas.com.br/dimensions
 
 Método HTTP | Caminho | Descrição
 --|--|--
@@ -82,7 +82,7 @@ string | value | valor da dimensão
 
 Para consultar todos os cadastros de variações utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
 
-`http://api.focuslojas.com.br/dimensions`
+`http://celero.focuslojas.com.br/dimensions`
 
 Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
 

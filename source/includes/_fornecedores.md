@@ -7,7 +7,7 @@ Este recurso represente o cadastro de um fornecedor. Cada produto possui necessa
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/suppliers.json
+Produção: http://celero.focuslojas.com.br/suppliers.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
