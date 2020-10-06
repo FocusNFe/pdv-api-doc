@@ -1,6 +1,6 @@
 # Informações de contato
 
-Este recurso representa as informações de contato de uma pessoa ou empresa (Cliente ou Fornecedor). Cada pessoa pode ter de zero à N contatos.
+Este recurso representa as informações de contato de uma pessoa ou empresa (Cliente ou Fornecedor). Cada pessoa pode ter de zero à N contatos. O uso deste endpoint é opcional, pois ele estes registros podem ser cadastrados diretamente no cadastro de cliente ou fornecedor.
 
 ## URL's
 
@@ -8,8 +8,8 @@ Produção: http://api.focuslojas.com.br/contact_infos
 
 Método HTTP | Caminho | Descrição
 --|--|--
-GET | /contact_infos | Consulta de departamentos.
-POST | /contact_infos | Criação de uma novo departamento.
+GET | /contact_infos | Consulta de contatos.
+POST | /contact_infos | Criação de uma novo contato.
 
 ## Campos
 

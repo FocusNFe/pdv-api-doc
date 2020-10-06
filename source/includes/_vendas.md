@@ -1,13 +1,18 @@
 # Vendas
 
+Esta seção descreve uma venda realizada no PDV. O PDV utiliza este endpoint para gravação das vendas, e é disponibilizado para sistemas terceiros apenas como consulta.
+
+* Possui campo version: sim
+* Possui campo original_id: sim, mas de uso exclusivo do PDV.
+
 ## URL's
 
-Produção: http://api.focuslojas.com.br/sales
+Produção: http://api.focuslojas.com.br/sales.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
-GET | /sales | Consulta todas as variações cadastradas.
-POST | /sales | Cria uma nova venda.
+GET | /sales.json | Consulta todas as vendas
+GET | /sales/ID.json | Consulta uma venda específica
 
 ## Campos
 
@@ -44,7 +49,7 @@ nfce_contingencia_efetivada | indica se a emissão em contingência já foi efet
 url_xml_cfe | URL do xml da CFe emitida por SAT fiscal.
 customer | Lista de dados do cliente.
 pos | Lista de dados do PDV.
-pos_entries | Lista de dados de entradas do PDV (pagamentos). 
+pos_entries | Lista de dados de entradas do PDV (pagamentos).
 sold_items | Lista de dados dos itens vendidos.
 returned_items | Lista de dados dos itens devolvidos em uma venda.
 
@@ -105,7 +110,7 @@ Existem duas listas aqui, são elas:
 * **card_brand**: Contém informações do cartão.
 	1. name: Nome (fixo).
 	2. tef_parameter: Parâmetro TEF
-* **card_company**: Contém informações da credenciadora do cartão. 
+* **card_company**: Contém informações da credenciadora do cartão.
 	1. name: Nome (fixo).
 	2. tef_parameter: Parâmetro TEF.
 
@@ -185,7 +190,7 @@ code | Referência
 
 ### Campos da lista original_sale_info
 
-(Campo removido na versão 47) Informações sobre a venda onde este que está sendo devolvido foi vendido
+Informações sobre a venda onde este que está sendo devolvido foi vendido
 
 Campo | Descrição
 --|--
@@ -246,78 +251,3 @@ Campo | Descrição
 id | id do PDV em nosso retaguarda
 ecf_serial_number | Número de série do ECF se aplicável
 number | Número do PDV
-
-
-## Criação
-
-Para criar uma nova venda utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/sales`
-
-Utilize o comando HTTP **POST** para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados abaixo.
-
-Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.
-
-> Exemplo de JSON para criação de uma venda.
-
-```json
-```
-
-Campo | Descrição
---|--
-customer_original_id: Identificador original do cliente
-status - Situação da venda, permite os valores: 'realized' (realizado), 'canceled' (cancelado pelo retaguarda - usado apenas em sistemas não-fiscais), 'canceled_pos', (cancelado pelo PDV), 'unfinished' (não finalizado, ou seja, cancelado pelo PDV antes da impressão do valor total)
-sold_at: Data e hora da venda no formato ISO8601
-
-### Campos da lista pos_entries_attributes
-
-Lista de todas os pagamentos feitos por esta compra, com os seguintes campos:
-
-Campo | Descrição
---|--
-entry_type | Tipo do pagamento (Dinheiro, Cartão, TEF, Cheque, Carnê ou Saldo Utilizado).
-card_type | Quando cartão, informa "D" - Débito ou "C" - Crédito.
-num_installments | Número de parcelas do pagamento. Usado em carnê ou pagamentos em crédito.
-value | Valor total do pagamento.
-card_brand | Nome do cartão. Permite os valores: Visa, American Express, Mastercard, Senff, Hipercard, Diners, Regicred, Banrisul, Elo, Diners, Sicredi, VerdeCard, BanesCard.
-card_company | Nome da credenciadora de cartão. Permite os valores: American Express, Rede, Cielo, Senff, GetNet, Regicred, Vero, PagSeguro, Paypal, Mercadopago.
-
-### Campos da lista sold_items_attributes
-
-Lista de todos os produtos vendidos, com os seguintes campos:
-
-Campo | Descrição
---|--
-product_id | Identificador do produto.
-quantity | Quantidade vendida.
-price | Preço unitário de venda.
-
-
-### Campos da lista returned_items_attributes
-
-Lista de todos os produtos devolvidos, com os seguintes campos:
-
-Campo | Descrição
---|--
-product_id | Identificador do produto.
-id | Identificador do produto.
-quantity | Quantidade vendida.
-price | Preço unitário de venda.
-status | Situação do item, permite os valores: 'realized' (realizado), 'canceled' (cancelado pelo retaguarda - usado apenas em sistemas não-fiscais), 'canceled_pos' (cancelado pelo PDV).
-
-## Consulta
-
-Para consultar todos os cadastros de variações utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/sales`
-
-Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
-
-Ao lado você pode visualizar como é o JSON de resposta da nossa API.
-
-> JSON enviado pela API Focus Lojas como resposta da consulta.
-
-```json
-```
-
-## Erros

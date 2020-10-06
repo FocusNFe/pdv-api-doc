@@ -1,5 +1,8 @@
 # Produtos
 
+* Possui campo version: sim
+* Possui campo original_id: sim
+
 Este recurso representa um produto ou um conjunto de produtos que diferem apenas pelo seus valores de grade. Uma grade é uma dimensão do produto que pode assumir um conjunto de valores. Um exemplo de grade é "cor", que define a cor do produto, que pode assumir os valores "azul, preto, verde ou vermelho". A definição das grades e valores possíveis deve ser feita antes de cadastrar o produto utilizando o recurso [dimensions](#Variações). Cada produto aceita no máximo 3 valores de grade. Desta maneira podemos cadastrar uma hierarquia como esta:
 
 * Blusa feminina da marca ACME (Agrupador)
@@ -9,7 +12,8 @@ Este recurso representa um produto ou um conjunto de produtos que diferem apenas
 	4. Cor vermelha, tamanho M (Item de grade)
 
 
-O produto é usado para representar tanto o agrupador quanto o item de grade. Isto é feito utilizando os seguintes campos:
+O produto é usado para representar tanto o agrupador quanto o item de grade. Isto é feito usando os seguintes campos:
+
 
 ### Agrupador
 
@@ -37,12 +41,14 @@ Outros campos são copiados automaticamente do produto agrupador
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/products
+Produção: http://api.focuslojas.com.br/products.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
-GET | /products | Consulta todas as variações cadastradas.
-POST | /products | Cria um novo produto.
+GET | /products.json | Consulta
+GET | /products/ID.json | Consulta de registro específico
+POST | /products.json | Criação de um novo registro
+PUT | /products/ID.json | Alteração de um registro
 
 ## Campos
 
@@ -93,35 +99,3 @@ boolean | adquirido_com_st | Indica se o produto foi adquirido com substituiçã
 string | codigo_beneficio_fiscal | 8 caracteres exatos. Indica o código do benefício fiscal para produtos não tributados, isentos ou imunes. Alguns estados não utilizam ainda este campo.
 
 (\*) Indica campos obrigatórios.
-
-## Criação
-
-Para criar um novo cadastro de produto utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/products`
-
-Utilize o comando HTTP **POST** para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados na seção [Campos](#campos)
-
-Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.
-
-> Exemplo de JSON para criação de um produto.
-
-```json
-```
-
-## Consulta
-
-Para consultar todos os cadastros de variações utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/products`
-
-Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
-
-Ao lado você pode visualizar como é o JSON de resposta da nossa API.
-
-> JSON enviado pela API Focus Lojas como resposta da consulta.
-
-```json
-```
-
-## Erros

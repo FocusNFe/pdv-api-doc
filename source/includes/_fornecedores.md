@@ -1,15 +1,20 @@
 # Fornecedores
 
-Este recurso represente o cadastro de um fornecedor.
+Este recurso represente o cadastro de um fornecedor. Cada produto possui necessariamente um fornecedor, também é usado para representar a marca do produto. Seu uso é obrigatório, mas ao criar uma rede de loja é criado um fornecedor default cujo nome é o nome da rede de lojas.
+
+* Possui campo version: sim
+* Possui campo original_id: sim
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/suppliers
+Produção: http://api.focuslojas.com.br/suppliers.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
-GET | /suppliers | Consulta de departamentos.
-POST | /suppliers | Criação de uma novo departamento.
+GET | /suppliers.json | Consulta
+GET | /suppliers/ID.json | Consulta de registro específico
+POST | /suppliers.json | Criação de um novo registro
+PUT | /suppliers/ID.json | Alteração de um registro
 
 ## Campos
 
@@ -17,7 +22,7 @@ Tipo de valor | Campo | Descrição
 --|--|--
 int | id | Identificador do sistema.
 int | original_id | Identificador externo.
-string | legal_type | "legal" para pessoa jurídica ou "natural" para pessoa física.
+string | legal_type* | "LEGAL" para pessoa jurídica ou "NATURAL" para pessoa física.
 string | name* | Nome, se pessoa física, ou nome fantasia, para pessoa jurídica.
 string | cnpj | CNPJ, apenas para pessoas jurídicas.
 string | cpf | CPF, apenas para pessoas físicas.
@@ -29,36 +34,3 @@ string | rg | R.G., apenas para pessoas físicas.
 string | razao_social | Razão social, apenas para pessoas jurídicas.
 string | brand_name* | Nome da marca que o fornecedor representa.
 string | web_address | Endereço da página web do fornecedor.
-
-
-## Criação
-
-Para criar um novo departamento utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/suppliers`
-
-Utilize o comando HTTP **POST** para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados abaixo.
-
-Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.
-
-> Exemplo de JSON para criação de um fornecedor.
-
-```json
-```
-
-## Consulta
-
-Para consultar os cadastros de departamentos utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/suppliers`
-
-Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
-
-Ao lado você pode visualizar como é o JSON de resposta da nossa API.
-
-> JSON enviado pela API Focus Lojas como resposta da consulta.
-
-```json
-```
-
-## Erros	

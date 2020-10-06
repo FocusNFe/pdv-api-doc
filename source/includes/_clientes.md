@@ -1,14 +1,20 @@
 # Clientes
 
+Representa um cliente no sistema. Uma venda pode ou não conter um cliente. Muitos dos campos são iguais ao de fornecedor.
+
+* Possui campo version: sim
+* Possui campo original_id: não
+
 ## URL's
 
 Produção: http://api.focuslojas.com.br/customers.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
-POST | /customers.json | Cria um novo cadastro de cliente.
-GET | /customers.json | Consulta de todos os clientes cadastrados.
-GET | / customers/ID.json | Consulta um cadastro especifico.
+GET | /customers.json | Consulta
+GET | /customers/ID.json | Consulta de registro específico
+POST | /customers.json | Criação de um registro
+PUT | /customers/ID.json | Alteração de um registro.
 
 ## Campos
 
@@ -37,13 +43,9 @@ Grupo / Lista | Descrição
 --|--
 contact_infos | Lista de informações de contato (ver contact_infos).
 addresses | Lista com os dados do endereço (ver addresses).
-installment_credits |
-related_people |
-contracts |
 pais | Lista com as informações do(s) país().
 municipio | Lista com os dados do(s) município(s).
 customers | Lista com os dados do(s) cliente(s).
-meta | Mostra o campo 'total' com o total de registros encontrados (busca por todos os cadastros).
 
 
 ### Campos da lista contact_infos
@@ -157,17 +159,6 @@ sigla_uf | Sigla do Estado.
 nome_municipio | Nome da cidade.
 nome_and_uf | Nome da cidade e sigla da UF, separados por um traço.
 codigo_municipio | Código da cidade com base nos dados do IBGE.
-item_lista_servico_type | Tipo do código do serviço, para NFSe, utilizados no município.
-
-
-### Campos da lista installment_credits
-
-
-### Campos da lista related_people
-
-
-### Campos da lista contracts
-
 
 
 ### Campos da lista customers
@@ -232,23 +223,21 @@ int | id | Identificador do sistema.
 string | active | Indica se cliente esta ativo ou não (padrão: verdadeiro).
 string | cep | CEP.
 string | cnpj | CNPJ, apenas para pessoas jurídicas.
- | cnpj_emissao | 
- | comment |
+string | cnpj_emissao | CNPJ para emissão de documentos fiscais
+string | comment | Observações sobre o cliente
 string | contact_name | Nome do contato, apenas para pessoas jurídicas.
 string | cpf | CPF, apenas para pessoas físicas.
 string | inscricao_estadual | Inscrição estadual, apenas para pessoas jurídicas.
- | inscricao_estadual_emissao |
- | inscricao_municipal |
- | inscricao_suframa |
+string | inscricao_estadual_emissao | IE para emissão de documentos fiscais, quando diferente da IE principal
+string | inscricao_municipal | inscrição municipal
+string | inscricao_suframa | inscrição na zona franca de Manaus
 bool | isento_inscricao_estadual | Informa se a pessoa jurídica é isenta da inscrição estadual.
-bool | isento_inscricao_estadual_emissao | 
+bool | isento_inscricao_estadual_emissao |
 string | legal_type | "LEGAL" para pessoa jurídica ou "NATURAL" para pessoa física.
 string | name | Nome, se pessoa física, ou nome fantasia, para pessoa jurídica.
 string | razao_social | Razão social, apenas para pessoas jurídicas.
 bool | regime_simples_nacional | Indicador se o cliente é do Regime Tributário Simples Nacional.
 string | rg | R.G., apenas para pessoas físicas.
- | web_address |
- | f_store_id |
 date | birthday | Data de aniversário, se pessoa física.
 bool | special | Informa se é cliente especial.
 text | operator_message | Mensagem ao operador.
@@ -259,26 +248,12 @@ date | created_at | Data de criação do cadastro.
 date | updated_at | Data da última alteração no cadastro.
 int | version | Número da versão do cadastro.
 bool | enable_installment_credit |
- | nfe_address_uf |
 string | name_and_document | Nome do cliente e seu documento de identificação (CNPJ ou CPF).
 array | contact_info_ids | Código de referência dos contatos do cliente.
 array | address_ids | Código de referência do endereço.
- | sale_type_id |
 int | store_id | Identificador interno (no retaguarda) da loja de origem do cliente
- | installment_credit_id |
- | related_person_ids |
- | saas_price_id |
 
 
-## Criação
-
-Para criar um novo cadastro de cliente utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/customers.json`
-
-Utilize o comando HTTP **POST** para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados na seção [Campos](#campos)
-
-Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.
 
 > Exemplo de JSON para criação de um cliente.
 
@@ -300,9 +275,11 @@ Ao lado você pode visualizar como é o JSON esperado para criação e como é o
                 "cep":"83550020"
             }
         ]
-    } 
+    }
 }
 ```
+
+## Criação
 
 > Exemplo da resposta da API para criação de cliente:
 
@@ -359,17 +336,10 @@ Ao lado você pode visualizar como é o JSON esperado para criação e como é o
 }
 ```
 
+
+Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.
+
 ## Consulta
-
-Há duas formas de consultar os cadastros de clientes, a primeira é realizando um consulta de todos os registros, a segunda forma é a consulta de um cadastro especifico.
-
-### Consultando todos os cadastros
-
-Para consultar todos os cadastros de clientes utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/customers.json`
-
-Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
 
 Ao lado você pode visualizar como é o JSON de resposta da nossa API.
 
@@ -651,22 +621,3 @@ Ao lado você pode visualizar como é o JSON de resposta da nossa API.
     }
 }
 ```
-
-## Erros
-
-Erros mais comuns e possíveis foram documentados aqui como uma forma de auxiliar / orientar os novos usuários da nossa API. Separamos os erros possíveis conforme o método HTTP utilizado.
-
-### Criação (POST)
-
-### Consulta (GET)
-
-Abaixo temos a tabela dos erros mais comuns quando a operação é a consulta de clientes.
-
-Código HTTP | Mensagem | Causa | Correção
---|--|--|--
-401 (Unauthorized) | `{ "error": "Você precisa logar-se ou cadastrar-se antes de continuar." }` | Header de autenticação não informado. | É necessário informar o header de autenticação.
-401 (Unauthorized) | ` HTTP Token: Access denied. ` | Header de autenticação informado incorretamente. | Informe o header de autenticação confome o esperado. Veja [aqui](#autenticacao).
-
-### Exclusão (DELETE)
-
-### Alteração (PUT)

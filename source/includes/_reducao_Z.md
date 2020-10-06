@@ -1,15 +1,19 @@
 # Redução Z
 
-Este recurso representa o registro das reduções z armazenados na impressora fiscal. Recuperamos os dados exatamente como eles estão na impressora, com zeros a esquerda e quantidade fixa de posições (as duas últimas representam os centavos).
+Apenas para uso de ECF
+
+Este recurso representa o registro das reduções z armazenados na impressora fiscal (ECF). Recuperamos os dados exatamente como eles estão na impressora, com zeros a esquerda e quantidade fixa de posições (as duas últimas representam os centavos).
+
+* Possui campo version: sim
+* Possui campo original_id: não
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/reducoes_z
+Produção: http://api.focuslojas.com.br/reducoes_z.json
 
 Método HTTP | Caminho | Descrição
---|--|--	
-GET | /reducoes_z | Consulta de departamentos.
-POST | /reducoes_z | Criação de uma novo departamento.
+--|--|--
+GET | /reducoes_z.json | Consulta de reduções
 
 ## Campos
 
@@ -57,7 +61,7 @@ venda_bruta | Campo calculado já em formato decimal - É a venda bruta, calcula
 numero_mapa_fiscal | Número do mapa fiscal.
 pos | Lista com informações do PDV/ECF.
 info_aliquotas | Lista de informações sobre as alíquotas e totais parciais.
-	
+
 ### Campos da lista pos
 
 Informações do PDV/ECF.
@@ -77,21 +81,3 @@ Campo | Descrição
 tot_parcial | Total parcial (Base de cálculo).
 aliq_trib | Allíquota tributária.
 valor_imposto | Valor do imposto.
-
-
-## Consulta
-
-Para consultar os cadastros de usuários utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/reducoes_z`
-
-Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
-
-Ao lado você pode visualizar como é o JSON de resposta da nossa API.
-
-> JSON enviado pela API Focus Lojas como resposta da consulta.
-
-```JSON
-```
-
-## Erros	

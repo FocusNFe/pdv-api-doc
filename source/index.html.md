@@ -17,17 +17,10 @@ includes:
   - clientes
   - usuarios_pdv
   - vendas
-  - caixa
-  - cheque
-  - configuracoes_loja
-  - contador_inventario
-  - entradas_pdv
   - informacaoes_contato
-  - inventario
-  - parametros_sistema
   - reducao_Z
   - vale_presente
-  - errors
+  - inventario
 
 search: true
 

@@ -1,15 +1,20 @@
 # Usuários do PDV
 
-Este recurso represente o cadastro de um usuário do PDV (vendedor, gerente ou administrador).
+Este recurso represente o cadastro de um usuário do PDV (vendedor, gerente ou administrador). Uma venda possui necessariamente um usuário do PDV (representando o vendedor).
+
+* Possui campo version: sim
+* Possui campo original_id: não
 
 ## URL's
 
-Produção: http://api.focuslojas.com.br/pos_users
+Produção: http://api.focuslojas.com.br/pos_users.json
 
 Método HTTP | Caminho | Descrição
---|--|--	
-GET | /pos_users | Consulta de departamentos.
-POST | /pos_users | Criação de uma novo departamento.
+--|--|--
+GET | /pos_users.json | Consulta
+GET | /pos_users/ID.json | Consulta de registro específico
+POST | /pos_users.json | Criação de um novo registro
+PUT | /pos_users/ID.json | Alteração de um registro
 
 ## Campos
 
@@ -28,35 +33,3 @@ bool | is_cash_drawer_operator | Indica se o usuário é um caixa (poderá abrir
 bool | active | Indica se o usuário esta ativo.
 
 (\*) Campos obrigatórios.
-
-## Criação
-
-Para criar um novo departamento utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/pos_users`
-
-Utilize o comando HTTP **POST** para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados abaixo.
-
-Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.
-
-> Exemplo de JSON para criação de um fornecedor.
-
-```json
-```
-
-## Consulta
-
-Para consultar os cadastros de usuários utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/pos_users`
-
-Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
-
-Ao lado você pode visualizar como é o JSON de resposta da nossa API.
-
-> JSON enviado pela API Focus Lojas como resposta da consulta.
-
-```json
-```
-
-## Erros	

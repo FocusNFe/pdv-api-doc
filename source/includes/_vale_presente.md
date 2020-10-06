@@ -1,12 +1,20 @@
 # Vale Presente
 
+Representa um vale presente. Um vale presente pode ser criado externamente ou pelo próprio PDV quando há devolução de alguma venda.
+
+* Possui campo version: não
+* Possui campo original_id: sim, mas de uso exclusivo do PDV
+
 ## URL's
 
-Produção: http://api.focuslojas.com.br/gift_coupons
+Produção: http://api.focuslojas.com.br/gift_coupons.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
-POST | gift_coupons | Cria um novo vale presente.
+GET | /gift_coupons.json | Consulta
+GET | /gift_coupons/ID.json | Consulta de registro específico
+POST | /gift_coupons.json | Criação de um novo registro
+PUT | /gift_coupons/ID.json | Alteração de um registro
 
 ## Campos
 
@@ -24,23 +32,3 @@ int | customer_id* | Id do cliente no Focus Lojas.
 string | status* | Qual o status deste vale presente (valid, void, used).
 date | used_at | Se o vale presente já foi usado indica a data em que o uso ocorreu.
 int | sale_id | Id da Venda em que foi utilizdo.
-
-## Criação
-
-Para criar um novo cadastro de vale presente utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
-
-`http://api.focuslojas.com.br/gift_coupons`
-
-Utilize o comando HTTP **POST** para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados na seção [Campos](#campos)
-
-Ao lado você pode visualizar como é o JSON esperado para criação e como é o JSON devolvido pela API.
-
-> Exemplo de JSON para criação de um cliente.
-
-```json
-
-JSON DE EXEMPLO AQUI
-
-```
-
-## Erros
