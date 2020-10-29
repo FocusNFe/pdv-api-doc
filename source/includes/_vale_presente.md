@@ -7,7 +7,7 @@ Representa um vale presente. Um vale presente pode ser criado externamente ou pe
 
 ## URL's
 
-Produção: http://celero.focuslojas.com.br/gift_coupons.json
+Produção: https://pdv-api.celero.mobi/gift_coupons.json
 
 Método HTTP | Caminho | Descrição
 --|--|--

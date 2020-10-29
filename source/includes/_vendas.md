@@ -7,7 +7,7 @@ Esta seção descreve uma venda realizada no PDV. O PDV utiliza este endpoint pa
 
 ## URL's
 
-Produção: http://celero.focuslojas.com.br/sales.json
+Produção: https://pdv-api.celero.mobi/sales.json
 
 Método HTTP | Caminho | Descrição
 --|--|--

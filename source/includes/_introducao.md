@@ -14,7 +14,7 @@ Deleta uma loja cujo id é2 | DELETE /lojas/2
 
 ## URL
 
-Produção: http://celero.focuslojas.com.br/
+Produção: https://pdv-api.celero.mobi/
 
 ## Respostas
 
@@ -120,9 +120,9 @@ Ao buscar uma coleção de objetos , a API por default devolve 30 registros por 
 
 A próxima página da consulta pode ser acessada indicando o parâmetro offset na URL, por exemplo:
 
-* Página 1: http://celero.focuslojas.com.br/customers.json
-* Página 2: http://celero.focuslojas.com.br/customers.json?offset=30
-* Página 3: http://celero.focuslojas.com.br/customers.json?offset=60
+* Página 1: https://pdv-api.celero.mobi/customers.json
+* Página 2: https://pdv-api.celero.mobi/customers.json?offset=30
+* Página 3: https://pdv-api.celero.mobi/customers.json?offset=60
 
 ## Facilidades de sincronização
 
@@ -144,7 +144,7 @@ Quando é feita sincronização entre dois sistemas, nem sempre é interessante 
 
 Para este tipo de sincronização, nós incluímos um campo chamado "version" (versão). Cada registro salvo incrementa uma versão global ao conjunto de lojas. Desta forma, o sistema terceiro precisa apenas armazenar a última versão de seu conhecimento para cada conjunto de lojas (de uma mesma propriedade). Por exemplo:
 
-Para buscar todas as vendas deve-se chamar o endpoint http://celero.focuslojas.com.br/sales.json?version=0. Ao fim do processamento desta lista, o sistema terceiro deverá armazenar o último version que foi importado. Caso seja o version=123 a próxima consulta deverá ser http://celero.focuslojas.com.br/sales.json?version=123 que irá buscar apenas as versões maiores que 123, e assim por diante.
+Para buscar todas as vendas deve-se chamar o endpoint https://pdv-api.celero.mobi/sales.json?version=0. Ao fim do processamento desta lista, o sistema terceiro deverá armazenar o último version que foi importado. Caso seja o version=123 a próxima consulta deverá ser https://pdv-api.celero.mobi/sales.json?version=123 que irá buscar apenas as versões maiores que 123, e assim por diante.
 
 ## Formato desta documentação
 

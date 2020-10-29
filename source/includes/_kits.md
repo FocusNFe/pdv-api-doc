@@ -7,7 +7,7 @@ Este recurso representa o cadastro de um kit de produtos. Seu uso é opcional.
 
 ## URL's
 
-Produção: http://celero.focuslojas.com.br/kits.json
+Produção: https://pdv-api.celero.mobi/kits.json
 
 Método HTTP | Caminho | Descrição
 --|--|--

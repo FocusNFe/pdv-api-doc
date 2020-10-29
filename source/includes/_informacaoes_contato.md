@@ -4,7 +4,7 @@ Este recurso representa as informações de contato de uma pessoa ou empresa (Cl
 
 ## URL's
 
-Produção: http://celero.focuslojas.com.br/contact_infos
+Produção: https://pdv-api.celero.mobi/contact_infos
 
 Método HTTP | Caminho | Descrição
 --|--|--
@@ -28,7 +28,7 @@ integer | version | Versão do registro para buscas por registros atualizados.
 
 Para criar um novo departamento utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
 
-`http://celero.focuslojas.com.br/contact_infos`
+`https://pdv-api.celero.mobi/contact_infos`
 
 Utilize o comando HTTP **POST** para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados abaixo.
 
@@ -43,7 +43,7 @@ Ao lado você pode visualizar como é o JSON esperado para criação e como é o
 
 Para consultar os cadastros de departamentos utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).
 
-`http://celero.focuslojas.com.br/contact_infos`
+`https://pdv-api.celero.mobi/contact_infos`
 
 Utilize o comando HTTP **GET** nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu [Campos](#campos).
 

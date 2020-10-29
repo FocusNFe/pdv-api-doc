@@ -7,7 +7,7 @@ Este recurso represente o cadastro de um usuário do PDV (vendedor, gerente ou a
 
 ## URL's
 
-Produção: http://celero.focuslojas.com.br/pos_users.json
+Produção: https://pdv-api.celero.mobi/pos_users.json
 
 Método HTTP | Caminho | Descrição
 --|--|--

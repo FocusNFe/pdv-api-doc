@@ -9,7 +9,7 @@ Este recurso representa o registro das reduções z armazenados na impressora fi
 
 ## URL's
 
-Produção: http://celero.focuslojas.com.br/reducoes_z.json
+Produção: https://pdv-api.celero.mobi/reducoes_z.json
 
 Método HTTP | Caminho | Descrição
 --|--|--
