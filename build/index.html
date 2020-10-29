@@ -554,7 +554,7 @@
 </tr>
 </tbody></table>
 <h2 id='url'>URL</h2>
-<p>Produção: http://celero.focuslojas.com.br/</p>
+<p>Produção: https://pdv-api.celero.mobi/</p>
 <h2 id='respostas'>Respostas</h2>
 <p>As chamadas HTTP devolvem as informações em formato JSON.</p>
 
@@ -649,9 +649,9 @@ curl <span class="nt">-H</span> <span class="s1">'Authorization: Token token=TOK
 <p>A próxima página da consulta pode ser acessada indicando o parâmetro offset na URL, por exemplo:</p>
 
 <ul>
-<li>Página 1: http://celero.focuslojas.com.br/customers.json</li>
-<li>Página 2: http://celero.focuslojas.com.br/customers.json?offset=30</li>
-<li>Página 3: http://celero.focuslojas.com.br/customers.json?offset=60</li>
+<li>Página 1: https://pdv-api.celero.mobi/customers.json</li>
+<li>Página 2: https://pdv-api.celero.mobi/customers.json?offset=30</li>
+<li>Página 3: https://pdv-api.celero.mobi/customers.json?offset=60</li>
 </ul>
 <h2 id='facilidades-de-sincronizacao'>Facilidades de sincronização</h2>
 <p>A sincronização entre sistemas oferece alguns desafios, por isso usamos duas funcionalidades que ajudam a tornar a sincronização mais fácil do que apenas usar as operações convencionais de um CRUD.</p>
@@ -668,7 +668,7 @@ curl <span class="nt">-H</span> <span class="s1">'Authorization: Token token=TOK
 
 <p>Para este tipo de sincronização, nós incluímos um campo chamado &quot;version&quot; (versão). Cada registro salvo incrementa uma versão global ao conjunto de lojas. Desta forma, o sistema terceiro precisa apenas armazenar a última versão de seu conhecimento para cada conjunto de lojas (de uma mesma propriedade). Por exemplo:</p>
 
-<p>Para buscar todas as vendas deve-se chamar o endpoint http://celero.focuslojas.com.br/sales.json?version=0. Ao fim do processamento desta lista, o sistema terceiro deverá armazenar o último version que foi importado. Caso seja o version=123 a próxima consulta deverá ser http://celero.focuslojas.com.br/sales.json?version=123 que irá buscar apenas as versões maiores que 123, e assim por diante.</p>
+<p>Para buscar todas as vendas deve-se chamar o endpoint https://pdv-api.celero.mobi/sales.json?version=0. Ao fim do processamento desta lista, o sistema terceiro deverá armazenar o último version que foi importado. Caso seja o version=123 a próxima consulta deverá ser https://pdv-api.celero.mobi/sales.json?version=123 que irá buscar apenas as versões maiores que 123, e assim por diante.</p>
 <h2 id='formato-desta-documentacao'>Formato desta documentação</h2>
 <p>O restante desta documentação está organizada como uma referência de modelos disponíveis via API. São listadas as operações possíveis, seus campos e quaisquer observações ou cuidados especiais.</p>
 <h1 id='departamentos'>Departamentos</h1>
@@ -679,7 +679,7 @@ curl <span class="nt">-H</span> <span class="s1">'Authorization: Token token=TOK
 <li>Possui campo original_id: não</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/departments.json</p>
+<p>Produção: https://pdv-api.celero.mobi/departments.json</p>
 
 <table><thead>
 <tr>
@@ -734,7 +734,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: não</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/product_types.json</p>
+<p>Produção: https://pdv-api.celero.mobi/product_types.json</p>
 
 <table><thead>
 <tr>
@@ -791,7 +791,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: não</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/dimensions</p>
+<p>Produção: https://pdv-api.celero.mobi/dimensions</p>
 
 <table><thead>
 <tr>
@@ -897,7 +897,7 @@ Seu uso é opcional.</p>
 <h2 id='consulta'>Consulta</h2>
 <p>Para consultar todos os cadastros de variações utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).</p>
 
-<p><code>http://celero.focuslojas.com.br/dimensions</code></p>
+<p><code>https://pdv-api.celero.mobi/dimensions</code></p>
 
 <p>Utilize o comando HTTP <strong>GET</strong> nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu <a href="#campos">Campos</a>.</p>
 
@@ -914,7 +914,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: sim</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/suppliers.json</p>
+<p>Produção: https://pdv-api.celero.mobi/suppliers.json</p>
 
 <table><thead>
 <tr>
@@ -1106,7 +1106,7 @@ Seu uso é opcional.</p>
 
 <p>Outros campos são copiados automaticamente do produto agrupador</p>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/products.json</p>
+<p>Produção: https://pdv-api.celero.mobi/products.json</p>
 
 <table><thead>
 <tr>
@@ -1370,7 +1370,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: sim</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/kits.json</p>
+<p>Produção: https://pdv-api.celero.mobi/kits.json</p>
 
 <table><thead>
 <tr>
@@ -1492,7 +1492,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: não</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/customers.json</p>
+<p>Produção: https://pdv-api.celero.mobi/customers.json</p>
 
 <table><thead>
 <tr>
@@ -2219,7 +2219,7 @@ Seu uso é opcional.</p>
 </span></code></pre></div><h3 id='consultando-um-cadastro-especifico'>Consultando um cadastro especifico</h3>
 <p>Para consultar um cadastro de cliente especifico utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).</p>
 
-<p><code>http://celero.focuslojas.com.br/customers/ID.json</code></p>
+<p><code>https://pdv-api.celero.mobi/customers/ID.json</code></p>
 
 <p>Utilize o comando HTTP <strong>GET</strong> nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu <a href="#campos">Campos</a>.</p>
 
@@ -2335,7 +2335,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: não</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/pos_users.json</p>
+<p>Produção: https://pdv-api.celero.mobi/pos_users.json</p>
 
 <table><thead>
 <tr>
@@ -2439,7 +2439,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: sim, mas de uso exclusivo do PDV.</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/sales.json</p>
+<p>Produção: https://pdv-api.celero.mobi/sales.json</p>
 
 <table><thead>
 <tr>
@@ -3067,7 +3067,7 @@ Seu uso é opcional.</p>
 <h1 id='informacoes-de-contato'>Informações de contato</h1>
 <p>Este recurso representa as informações de contato de uma pessoa ou empresa (Cliente ou Fornecedor). Cada pessoa pode ter de zero à N contatos. O uso deste endpoint é opcional, pois ele estes registros podem ser cadastrados diretamente no cadastro de cliente ou fornecedor.</p>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/contact_infos</p>
+<p>Produção: https://pdv-api.celero.mobi/contact_infos</p>
 
 <table><thead>
 <tr>
@@ -3131,7 +3131,7 @@ Seu uso é opcional.</p>
 <h2 id='criacao'>Criação</h2>
 <p>Para criar um novo departamento utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).</p>
 
-<p><code>http://celero.focuslojas.com.br/contact_infos</code></p>
+<p><code>https://pdv-api.celero.mobi/contact_infos</code></p>
 
 <p>Utilize o comando HTTP <strong>POST</strong> para enviar o cadastro para nossa API. Envie como corpo da requisição os dados em formato JSON, utilizando os campos listados abaixo.</p>
 
@@ -3143,7 +3143,7 @@ Seu uso é opcional.</p>
 <div class="highlight"><pre class="highlight json tab-json"><code></code></pre></div><h2 id='consulta'>Consulta</h2>
 <p>Para consultar os cadastros de departamentos utilize a URL abaixo, alterando para o ambiente desejado (produção ou homologação).</p>
 
-<p><code>http://celero.focuslojas.com.br/contact_infos</code></p>
+<p><code>https://pdv-api.celero.mobi/contact_infos</code></p>
 
 <p>Utilize o comando HTTP <strong>GET</strong> nesta consulta. Os campos retornados serão os mesmos campos que foram listados no menu <a href="#campos">Campos</a>.</p>
 
@@ -3162,7 +3162,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: não</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/reducoes_z.json</p>
+<p>Produção: https://pdv-api.celero.mobi/reducoes_z.json</p>
 
 <table><thead>
 <tr>
@@ -3405,7 +3405,7 @@ Seu uso é opcional.</p>
 <li>Possui campo original_id: sim, mas de uso exclusivo do PDV</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/gift_coupons.json</p>
+<p>Produção: https://pdv-api.celero.mobi/gift_coupons.json</p>
 
 <table><thead>
 <tr>
@@ -3500,7 +3500,7 @@ A quantidade em estoque é sempre referente a um item de variação, quando apli
 <li>Possui campo original_id: não</li>
 </ul>
 <h2 id='url-39-s'>URL&#39;s</h2>
-<p>Produção: http://celero.focuslojas.com.br/inventories.json</p>
+<p>Produção: https://pdv-api.celero.mobi/inventories.json</p>
 
 <table><thead>
 <tr>
