@@ -17,6 +17,10 @@ includes:
   - clientes
   - usuarios_pdv
   - vendas
+  - card_brands
+  - card_companies
+  - config_cartoes
+  - cartoes_consolidado
   - informacaoes_contato
   - reducao_Z
   - vale_presente
