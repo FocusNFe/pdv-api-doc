@@ -8,6 +8,11 @@ class UniqueHeadCounter < Middleman::Renderers::MiddlemanRedcarpetHTML
   end
   def header(text, header_level)
     friendly_text = text.gsub(/<[^>]*>/,"").parameterize
+
+    # Set the main header based on the header level 1
+    @main_header = friendly_text if header_level == 1
+    friendly_text = "#{@main_header}_#{text.parameterize}" if @main_header
+
     if friendly_text.strip.length == 0
       # Looks like parameterize removed the whole thing! It removes many unicode
       # characters like Chinese and Russian. To get a unique URL, let's just
