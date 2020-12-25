@@ -25,6 +25,9 @@ includes:
   - reducao_Z
   - vale_presente
   - inventario
+  - domains
+  - stores
+  - pos
 
 search: true
 
