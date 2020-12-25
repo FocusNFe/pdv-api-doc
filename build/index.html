@@ -566,6 +566,48 @@
                   </li>
               </ul>
           </li>
+          <li>
+            <a href="#domains_domains" class="toc-h1 toc-link" data-title="Domains">Domains</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#domains_url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#domains_campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+                  <li>
+                    <a href="#domains_consideracoes-sobre-a-criacao-de-um-domain" class="toc-h2 toc-link" data-title="Considerações sobre a criação de um domain">Considerações sobre a criação de um domain</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#lojas_lojas" class="toc-h1 toc-link" data-title="Lojas">Lojas</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#lojas_url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#lojas_campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+                  <li>
+                    <a href="#lojas_consideracoes-sobre-a-criacao-de-uma-loja" class="toc-h2 toc-link" data-title="Considerações sobre a criação de uma loja">Considerações sobre a criação de uma loja</a>
+                  </li>
+                  <li>
+                    <a href="#lojas_consideracoes-sobre-a-chave-do-registro-de-uma-loja" class="toc-h2 toc-link" data-title="Considerações sobre a chave do registro de uma loja">Considerações sobre a chave do registro de uma loja</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#pdvs_pdvs" class="toc-h1 toc-link" data-title="PDVs">PDVs</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#pdvs_url-39-s" class="toc-h2 toc-link" data-title="URL's">URL's</a>
+                  </li>
+                  <li>
+                    <a href="#pdvs_campos" class="toc-h2 toc-link" data-title="Campos">Campos</a>
+                  </li>
+              </ul>
+          </li>
       </ul>
     </div>
     <div class="page-wrapper">
@@ -3979,6 +4021,243 @@ A quantidade em estoque é sempre referente a um item de variação, quando apli
 <td>decimal</td>
 <td>sold_quantity</td>
 <td>quantidade vendida do produto</td>
+</tr>
+</tbody></table>
+<h1 id='domains_domains'>Domains</h1>
+<p>Um domain representa uma coleção de lojas pertencentes a um mesmo proprietário (ex: uma rede de lojas).</p>
+
+<ul>
+<li>Possui campo version: não</li>
+<li>Possui campo original_id: não</li>
+<li>Ignora serial_number usado na autenticação</li>
+<li>API disponível apenas com token master</li>
+</ul>
+<h2 id='domains_url-39-s'>URL&#39;s</h2>
+<p>Produção: https://pdv-api.celero.mobi/domains.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/domains.json</td>
+<td>Consulta de domains. Utilize o parâmetro only_active=0 caso queira incluir os domínios desativados.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/domains/ID.json</td>
+<td>Consulta de um domain.</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/domains.json</td>
+<td>Criação de uma novo domain.</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/domains/ID.json</td>
+<td>Alteração de domain.</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/domains/ID.json</td>
+<td>Desativação de um domain (&quot;soft delete&quot;)</td>
+</tr>
+</tbody></table>
+<h2 id='domains_campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador (apenas leitura)</td>
+</tr>
+<tr>
+<td>name*</td>
+<td>Nome do domain</td>
+</tr>
+<tr>
+<td>first_user_email*</td>
+<td>Email do primeiro usuário. Disponível apenas na criação do domain, quando informado é criado um usuário com uma senha default e enviado para o seu email. Caso o usuário já exista ele é apenas associado ao domain.</td>
+</tr>
+</tbody></table>
+
+<p>Outros campos e modelos são devolvidos no retorno de uma consulta, incluindo campos de tabelas associadas, como lojas, fornecedores, variações e modelos de etiquetas. Estes dados associados são usados na interface do usuário final</p>
+<h2 id='domains_consideracoes-sobre-a-criacao-de-um-domain'>Considerações sobre a criação de um domain</h2>
+<p>A criação de um domain cria registros associados:</p>
+
+<ul>
+<li>Cria a primeira loja</li>
+<li>Cria o primeiro PDV para a primeira loja<br></li>
+<li>Cria o primeiro usuário do primeiro PDV</li>
+<li>Cria o usuário administrador caso ele ainda não exista</li>
+</ul>
+
+<p>Todos estes registros são devolvidos na criação de um novo domain.</p>
+<h1 id='lojas_lojas'>Lojas</h1>
+<p>Uma loja representa um estoque onde podem ser associados vários PDVs.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+<li>Ignora serial_number usado na autenticação</li>
+</ul>
+<h2 id='lojas_url-39-s'>URL&#39;s</h2>
+<p>Produção: https://pdv-api.celero.mobi/stores.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/stores.json</td>
+<td>Consulta de lojas. Utilize o parâmetro only_active=0 caso queira incluir as lojas desativadas.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/stores/ID.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/stores.json</td>
+<td>Criação de uma nova loja.</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/stores/ID.json</td>
+<td>Alteração de uma loja.</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/stores/ID.json</td>
+<td>Desativação de uma loja (&quot;soft delete&quot;)</td>
+</tr>
+</tbody></table>
+<h2 id='lojas_campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador (apenas leitura)</td>
+</tr>
+<tr>
+<td>name*</td>
+<td>Nome da loja</td>
+</tr>
+<tr>
+<td>serial_number</td>
+<td>Número de série. Utilizado como autenticação da API (apenas leitura)</td>
+</tr>
+<tr>
+<td>short_name</td>
+<td>Nome curto da loja, usado em algumas interfaces do sistema para permitir uma melhor visualização das lojas</td>
+</tr>
+<tr>
+<td>global_order</td>
+<td>Ordem global da loja dentro do domain. Usado como ordenação na apresentação das lojas no sistema. Preenchido automaticamente se omitido.</td>
+</tr>
+</tbody></table>
+
+<p>Outros campos e modelos são devolvidos no retorno de uma consulta, incluindo campos de tabelas associadas, como o PDV. Estes dados associados são usados na interface do usuário final</p>
+<h2 id='lojas_consideracoes-sobre-a-criacao-de-uma-loja'>Considerações sobre a criação de uma loja</h2>
+<p>A criação de uma loja cria registros associados:</p>
+
+<ul>
+<li>Cria o primeiro PDV da loja</li>
+<li>Cria o primeiro usuário do primeiro PDV</li>
+<li>Associa os usuários do domínio à nova loja criada</li>
+</ul>
+<h2 id='lojas_consideracoes-sobre-a-chave-do-registro-de-uma-loja'>Considerações sobre a chave do registro de uma loja</h2>
+<p>No retorno das consultas de uma loja, excepcionalmente é devolvida com a chave &quot;f_store&quot; ao invés da chave esperada &quot;store&quot;. Isso acontece devido à palavra &quot;store&quot; que é reservada dentro do Ember (interface do usuário final).</p>
+<h1 id='pdvs_pdvs'>PDVs</h1>
+<p>Um PDV representa o local físico onde são inseridas as vendas.</p>
+
+<ul>
+<li>Possui campo version: sim</li>
+<li>Possui campo original_id: não</li>
+</ul>
+<h2 id='pdvs_url-39-s'>URL&#39;s</h2>
+<p>Produção: https://pdv-api.celero.mobi/pos.json</p>
+
+<table><thead>
+<tr>
+<th>Método HTTP</th>
+<th>Caminho</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>GET</td>
+<td>/pos.json</td>
+<td>Consulta de PDVs. Utilize o parâmetro only_active=0 caso queira incluir os PDVs desativados.</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>/pos/ID.json</td>
+<td>Consulta</td>
+</tr>
+<tr>
+<td>POST</td>
+<td>/pos.json</td>
+<td>Criação de um novo PDV.</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>/pos/ID.json</td>
+<td>Alteração de um PDV.</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>/pos/ID.json</td>
+<td>Desativação de um PDV (&quot;soft delete&quot;)</td>
+</tr>
+</tbody></table>
+<h2 id='pdvs_campos'>Campos</h2>
+<table><thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>id</td>
+<td>Identificador (apenas leitura)</td>
+</tr>
+<tr>
+<td>number</td>
+<td>Número do PDV dentro da loja. Atribuido automaticamente se omitido</td>
+</tr>
+<tr>
+<td>global_order</td>
+<td>Ordem global do PDV dentro do domain. Usado como ordenação na apresentação dos PDVs no sistema. Preenchido automaticamente se omitido.</td>
+</tr>
+<tr>
+<td>label</td>
+<td>Rótulo do PDV, usado em alguns relatórios e em algumas interfaces do usuário.</td>
+</tr>
+<tr>
+<td>short_name</td>
+<td>Nome curto da loja, usado em algumas interfaces do sistema para permitir uma melhor visualização das lojas</td>
+</tr>
+<tr>
+<td>enable_web_sale</td>
+<td>Se verdadeiro, não irá considerar como um PDV externo (desktop) e sim como um PDV que será usado no frontend via web.</td>
 </tr>
 </tbody></table>
 
